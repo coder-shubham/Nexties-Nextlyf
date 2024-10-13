@@ -1,0 +1,12 @@
+<!-- res/drawable/bg_top_shape.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+    android:pathData="M0,0 C50,150 250,50 300,0 L300,200 L0,200 Z" />
+    <!-- Example of an irregular shape path -->
+<!--    android:fillColor="#4169E1"-->
+</vector>
