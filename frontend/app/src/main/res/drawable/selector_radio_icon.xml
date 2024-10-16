@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state: show the green tick -->
+    <item android:state_checked="true" android:drawable="@drawable/baseline_check_24" />
+
+    <!-- Non-selected state: transparent (no tick) -->
+    <item android:drawable="@android:color/transparent" />
+</selector>

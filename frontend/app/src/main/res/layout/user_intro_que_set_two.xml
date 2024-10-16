@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:backgroundTintMode="add"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Which fields are you \nmost interested in?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select up to 5 fields"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/quicksand_medium"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:chipSpacingHorizontal="5dp"
+        app:chipSpacingVertical="5dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_technology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Technology"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_healthcare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Healthcare"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Education"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_creative_arts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Creative Arts"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_science"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Science"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_engineering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Engineering"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_finance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Finance"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_environment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Environment"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_marketing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Marketing"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_social_impact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Social Impact"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_gaming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Gaming"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_travel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Travel &amp; Tourism"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_fitness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Fitness &amp; Wellness"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Media &amp; Journalism"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Food &amp; Culinary"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Business"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_fashion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Fashion &amp; Design"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Sports &amp; Recreation"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_real_estate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Real Estate"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cryptocurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Cryptocurrency"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <!-- Add more chips as needed -->
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+
+</LinearLayout>

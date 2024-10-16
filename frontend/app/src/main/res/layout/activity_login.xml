@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="10dp"
+    tools:context=".LoginActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible">
+
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/nextlyf_mainlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="LOGIN"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="44sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:hint="Email"
+        android:padding="10dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        app:startIconDrawable="@drawable/ic_baseline_people_alt_24"
+        app:startIconTint="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailFieldText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E9F2FF"
+            android:backgroundTintMode="add"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:hint="Password"
+        android:padding="10dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailField"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorPrimaryDark"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:startIconTint="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordFieldText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E9F2FF"
+            android:backgroundTintMode="add"
+            android:ellipsize="end"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:id="@+id/pass_layout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        app:errorEnabled="true"-->
+    <!--        app:passwordToggleEnabled="true"-->
+    <!--        app:passwordToggleTint="@color/colorPrimaryDark"-->
+    <!--        app:startIconDrawable="@drawable/ic_baseline_lock_24"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/passwordField"-->
+    <!--        app:startIconTint="@color/colorPrimaryDark">-->
+
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:id="@+id/pass_text"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="48dp"-->
+    <!--            android:background="@android:color/transparent"-->
+    <!--            android:fontFamily="@font/quicksand"-->
+    <!--            android:hint="Password"-->
+    <!--            android:inputType="textPassword"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:textSize="15sp" />-->
+
+
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <Button
+
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:padding="10dp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/loginConnectProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:padding="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/loginButton"
+            app:layout_constraintBottom_toBottomOf="@+id/loginButton" />
+
+<!--    <Button-->
+<!--        android:id="@+id/registerButton"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:fontFamily="@font/quicksand_medium"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="Register"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="18sp"-->
+<!--        app:boxCornerRadiusBottomEnd="20dp"-->
+<!--        app:boxCornerRadiusBottomStart="20dp"-->
+<!--        app:boxCornerRadiusTopEnd="20dp"-->
+<!--        app:boxCornerRadiusTopStart="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/loginButton" />-->
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Forget Password?"
+        android:fontFamily="@font/quicksand_medium"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordField" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/signUpQue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:fontFamily="@font/quicksand_medium"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+
+        />
+
+        <TextView
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Sign Up"
+            android:fontFamily="@font/quicksand_medium"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loginCheckProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:padding="6dp"
+        app:indicatorSize="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </com.google.android.material.progressindicator.CircularProgressIndicator>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
