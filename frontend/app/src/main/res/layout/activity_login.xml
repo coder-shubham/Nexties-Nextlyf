@@ -10,6 +10,13 @@
     tools:context=".LoginActivity">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible">
+
+
     <ImageView
         android:id="@+id/appLogo"
         android:layout_width="130dp"
@@ -56,6 +63,7 @@
         app:startIconTint="@color/colorPrimaryDark">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailFieldText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#E9F2FF"
@@ -92,6 +100,7 @@
         app:startIconTint="@color/colorPrimaryDark">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordFieldText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#E9F2FF"
@@ -156,6 +165,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/loginConnectProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:padding="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/loginButton"
+            app:layout_constraintBottom_toBottomOf="@+id/loginButton" />
 
 <!--    <Button-->
 <!--        android:id="@+id/registerButton"-->
@@ -222,6 +242,22 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loginCheckProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:padding="6dp"
+        app:indicatorSize="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </com.google.android.material.progressindicator.CircularProgressIndicator>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
