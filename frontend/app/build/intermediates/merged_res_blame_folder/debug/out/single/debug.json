@@ -1,0 +1,554 @@
+[
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_user_intro_que_set_two.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/user_intro_que_set_two.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_nextlyf_mainlogo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/nextlyf_mainlogo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_baseline_arrow_forward_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/baseline_arrow_forward_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_activity_sign_up.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/activity_sign_up.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/anim_slide_in.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/anim/slide_in.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_next.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_next.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_baseline_check_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/baseline_check_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_quicksand_medium.ttf.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/quicksand_medium.ttf"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_nextlyf_logo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/nextlyf_logo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-xhdpi_ic_go.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-xhdpi/ic_go.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-mdpi_ic_dropdown.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-mdpi/ic_dropdown.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-xxxhdpi_ic_bot.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-xxxhdpi/ic_bot.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_nextlyf_mainlogo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/nextlyf_mainlogo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_spinner_bg.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/spinner_bg.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_sent_drawable.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/sent_drawable.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_nextlyf_logo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/nextlyf_logo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_nextlyf_logo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/nextlyf_logo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_people_alt_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_people_alt_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_chip_background_selector.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/chip_background_selector.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_indicator_active.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/indicator_active.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_register_fragment.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/register_fragment.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-xxhdpi_ic_bot.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-xxhdpi/ic_bot.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_quicksand_light.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/quicksand_light.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_nextlyf_logo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/nextlyf_logo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_kalam_bold.ttf.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/kalam_bold.ttf"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_attachment_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_attachment_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_indicator_inactive.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/indicator_inactive.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-anydpi-v26_nextlyf_mainlogo_round.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-anydpi-v26/nextlyf_mainlogo_round.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_nextlyf_mainlogo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/nextlyf_mainlogo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_alegreya_sans_thin.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/alegreya_sans_thin.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_nextlyf_mainlogo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/nextlyf_mainlogo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_onboarding_connect_new.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/onboarding_connect_new.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_add_circle_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_add_circle_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_nextlyf_mainlogo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/nextlyf_mainlogo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_lock_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_lock_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_onboarding_item_layout.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/onboarding_item_layout.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_kalam.ttf.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/kalam.ttf"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-mdpi_ic_bot.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-mdpi/ic_bot.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/anim_slide_out.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/anim/slide_out.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_nextlyf_mainlogo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/nextlyf_mainlogo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_check.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_nextlyf_logo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/nextlyf_logo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_notifications_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_notifications_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_nextlyf_mainlogo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/nextlyf_mainlogo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_connect.jpg.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/connect.jpg"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_block_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_block_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-xxhdpi_ic_dropdown.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-xxhdpi/ic_dropdown.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-hdpi_ic_go.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-hdpi/ic_go.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_nextlyf_mainlogo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/nextlyf_mainlogo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-mdpi_ic_go.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-mdpi/ic_go.png"
+    },
+    {
+        "merged": "com.globalhackathon.nextlyf.app-merged_res-55:/layout_activity_sign_up.xml.flat",
+        "source": "com.globalhackathon.nextlyf.app-main-57:/layout/activity_sign_up.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_send.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_send.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_img.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/img.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-anydpi-v26_nextlyf_mainlogo.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-anydpi-v26/nextlyf_mainlogo.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-xxhdpi_ic_go.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-xxhdpi/ic_go.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_nextlyf_mainlogo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/nextlyf_mainlogo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_activity_login.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_receive_drawable.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/receive_drawable.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_nextlyf_mainlogo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/nextlyf_mainlogo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_selector_radio_icon.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/selector_radio_icon.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_nextlyf_mainlogo.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/nextlyf_mainlogo.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_nextlyf_logo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/nextlyf_logo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_round_textbg.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/round_textbg.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_love_heart.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_love_heart.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_search_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_button_bg.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/button_bg.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_speech_bubble.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_speech_bubble.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_delete_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_delete_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_dot_active.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/dot_active.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_nextlyf_logo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/nextlyf_logo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-xhdpi_ic_dropdown.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-xhdpi/ic_dropdown.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_add_people.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_add_people.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_quicksand.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/quicksand.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_nextlyf_logo_background.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/nextlyf_logo_background.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_bot.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/bot.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_avatar.jpg.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/avatar.jpg"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_activity_user_intro.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/activity_user_intro.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-anydpi-v26_nextlyf_logo_round.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-anydpi-v26/nextlyf_logo_round.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_bg_top_shape.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/bg_top_shape.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_circle_go.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/circle_go.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxxhdpi_nextlyf_logo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxxhdpi/nextlyf_logo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_selector_radio_button_background.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/selector_radio_button_background.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_round_spinnerbg.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/round_spinnerbg.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_baseline_arrow_circle_right_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/baseline_arrow_circle_right_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_onboarding_connect.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/onboarding_connect.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_open_sans.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/open_sans.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_dizzle.jpg.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/dizzle.jpg"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_nextlyf_logo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/nextlyf_logo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_user_intro_que_set_one.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/user_intro_que_set_one.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-anydpi-v26_nextlyf_logo.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-anydpi-v26/nextlyf_logo.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_nextlyf_logo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/nextlyf_logo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_nextlyf_logo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/nextlyf_logo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_nextlyf_mainlogo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/nextlyf_mainlogo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_nextlyf_mainlogo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/nextlyf_mainlogo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/color_chip_bg.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/color/chip_bg.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_user_intro_basic.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/user_intro_basic.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_activity_main.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-xhdpi_ic_bot.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-xhdpi/ic_bot.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_nextlyf_mainlogo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/nextlyf_mainlogo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_nextlyf_logo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/nextlyf_logo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-mdpi_nextlyf_logo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-mdpi/nextlyf_logo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_home_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_home_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_alegreya_sans_medium.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/alegreya_sans_medium.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-hdpi_ic_bot.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-hdpi/ic_bot.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/xml_backup_rules.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_thumb_up_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_thumb_up_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_unlike_heart.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_unlike_heart.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_nextlyf_mainlogo.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/nextlyf_mainlogo.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_activity_onboarding_screen.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/activity_onboarding_screen.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_button_circular_arrow.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/button_circular_arrow.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xhdpi_nextlyf_mainlogo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xhdpi/nextlyf_mainlogo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_person_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/font_quicksand_bold.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/font/quicksand_bold.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_bg_bottom_shape.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/bg_bottom_shape.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_circular_button_bg.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/circular_button_bg.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_nextlyf_logo_foreground.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/nextlyf_logo_foreground.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_dot_inactive.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/dot_inactive.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-xxhdpi_nextlyf_logo_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-xxhdpi/nextlyf_logo_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable-hdpi_ic_dropdown.png.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable-hdpi/ic_dropdown.png"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_add_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/layout_otp_fragment_layout.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/layout/otp_fragment_layout.xml"
+    },
+    {
+        "merged": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-merged_res-55:/drawable_ic_baseline_warning_24.xml.flat",
+        "source": "/Users/shubhamsarraf/.gradle/daemon/8.0/com.globalhackathon.nextlyf.app-main-57:/drawable/ic_baseline_warning_24.xml"
+    }
+]
