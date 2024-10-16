@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Which industry do you\nwork in?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/user_industry_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flexBoxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:alignItems="center"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="space_evenly">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryTech"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Technology &amp; IT"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryBusiness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Business &amp; Finance"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryArts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Arts &amp; Entertainment"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryMedia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Media &amp; Communication"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="45%" />
+
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryHealthcare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Healthcare"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <!-- Button 1 -->
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryLegal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Legal"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryEducation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Education"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <!-- Button 1 -->
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryScience"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Science &amp; Research"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryRetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Retail &amp; E-commerce"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <!-- Button 1 -->
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryHospitality"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:drawablePadding="3dp"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Hospitality &amp; Tourism"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_flexBasisPercent="40%" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/userIndustryOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selector_radio_button_background"
+                    android:button="@null"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="16dp"
+                    android:text="Others"
+                    android:textColor="@color/colorPrimary" />
+
+                <!-- Add more RadioButtons with the same layout -->
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+            <!-- Button 2 -->
+
+
+            <!-- Add more buttons as needed -->
+
+            <!--            </RadioGroup>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userIndustryOthersLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="Please specify other industry"
+                android:padding="5dp"
+                android:textColorHint="@color/colorPrimary"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userIndustryOthersText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

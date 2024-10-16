@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:backgroundTintMode="add"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="What hobbies or activities \ndo you enjoy in your \nfree time?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select up to 5 fields"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/quicksand_medium"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:chipSpacingHorizontal="5dp"
+        app:chipSpacingVertical="5dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Reading"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_writing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Writing"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Cooking/Baking"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_traveling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Traveling"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_fitness_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Fitness/Exercise"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_playing_sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Playing Sports"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_gardening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Gardening"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_watching_movies_tv_shows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Watching Movies/TV Shows"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_playing_video_games"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Playing Video Games"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_photography"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Photography"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Music"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_art_craft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Art &amp; Craft"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_dancing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Dancing"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_hiking_camping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Hiking/Camping"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_yoga_meditation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Yoga/Meditation"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_volunteering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Volunteering"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_learning_new_skills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Learning New Skills"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_socializing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Socializing"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_collecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Collecting"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_board_games_puzzles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:text="Board Games or Puzzles"
+            app:chipBackgroundColor="@color/chip_bg"
+            android:clickable="true"
+            android:checkable="true" />
+
+
+        <!-- Add more chips as needed -->
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+
+</LinearLayout>
