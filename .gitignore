@@ -46,3 +46,4 @@ s360-deployment/digitalocean/ignore.txt
 logs/
 .metadata/
 .~lock.*
+.env
