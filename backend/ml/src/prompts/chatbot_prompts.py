@@ -8,4 +8,4 @@ faq_instruction = lambda context: f"You are a chatbot for a co-living space comp
 # intent and entity prompt
 entity_response_format = '{"entity": "value", "entity": "value"}'
 intent_instruction = lambda entities, task: f"You are a chatbot for a co-living space company called Lyf. Based on the below entities, respond with the entities in JSON format that the user has provided for booking a {task}.\nEntities: {entities}\n\nRespond with a JSON in the format: {entity_response_format}"
-missing_entities_instruction = lambda entity, task, extracted_entities: f"The user has responded with the details for {extracted_entities} but hasn't responded with the below mentioned details while booking a {task}. Ask the user for this information.\n{entity}"
+missing_entities_instruction = lambda entity, task, extracted_entities: f"The user has responded with the details for {extracted_entities} but hasn't responded with the below mentioned details while booking a {task}. Ask the user for this information with a TTS-friendly response.\n{entity}"

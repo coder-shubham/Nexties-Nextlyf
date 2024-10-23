@@ -242,6 +242,7 @@ class ChatHandler:
                 intent_or_faq_object = self.validate_intent(retrieved_intents)
                 if intent_or_faq_object[0]:
                     intent = intent_or_faq_object[1]
+                    logging.info(f"Intent detected: {intent}")
                     self.active_intent = intent
 
                     response = self.entity_extraction(session_id, intent, user_message)

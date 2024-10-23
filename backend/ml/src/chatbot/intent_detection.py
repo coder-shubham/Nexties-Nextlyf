@@ -23,11 +23,11 @@
 chatbot_intents = {
     "book_room": ["n_persons", "location", "start_date", "end_date"],
     "book_shared_space": ["n_persons", "location", "start_date", "end_date"],
-    "book_event": ["n_persons", "location", "start_date", "end_date"],
-    "suggest_friend": ["location"],
-    "suggest_group": ["interests"],
-    "suggest_nearby_spots": ["location"],
-    "booking_info": ["booking_type"],
+    "book_event": ["location", "category", "type"], # category is like tech, music, etc. type is like workshop, concert, etc.; type is like offline or online
+    "suggest_friend": [],
+    "suggest_group": [],
+    "suggest_nearby_spots": [],
+    "show_booking_details": ["booking_type"],
     "feedback": [],
     "offers": [],
 }
