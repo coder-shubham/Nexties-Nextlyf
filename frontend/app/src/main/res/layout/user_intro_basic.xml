@@ -97,7 +97,7 @@
                     android:backgroundTint="#E9F2FF"
                     android:backgroundTintMode="add"
                     android:inputType="none"
-                    app:simpleItems="@array/my_items" />
+                    app:simpleItems="@array/gender" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,7 +126,7 @@
                         android:backgroundTint="#E9F2FF"
                         android:backgroundTintMode="add"
                         android:inputType="none"
-                        app:simpleItems="@array/my_items" />
+                        app:simpleItems="@array/country_list" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -201,7 +201,7 @@
                     android:backgroundTint="#E9F2FF"
                     android:backgroundTintMode="add"
                     android:inputType="none"
-                    app:simpleItems="@array/my_items" />
+                    app:simpleItems="@array/language_list" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

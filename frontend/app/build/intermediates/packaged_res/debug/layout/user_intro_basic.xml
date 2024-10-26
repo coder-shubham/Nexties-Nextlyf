@@ -30,7 +30,6 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/userIntroName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -42,6 +41,7 @@
                 app:startIconTint="@color/colorPrimaryDark">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userIntroName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E9F2FF"
@@ -79,7 +79,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/userIntroGender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -92,12 +91,13 @@
                 app:startIconTint="@color/colorPrimaryDark">
 
                 <AutoCompleteTextView
+                    android:id="@+id/userIntroGender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E9F2FF"
                     android:backgroundTintMode="add"
                     android:inputType="none"
-                    app:simpleItems="@array/my_items" />
+                    app:simpleItems="@array/gender" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,7 +108,6 @@
                 android:layout_marginLeft="10dp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/userIntroOriginCountry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -121,17 +120,17 @@
                     app:startIconTint="@color/colorPrimaryDark">
 
                     <AutoCompleteTextView
+                        android:id="@+id/userIntroOriginCountry"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#E9F2FF"
                         android:backgroundTintMode="add"
                         android:inputType="none"
-                        app:simpleItems="@array/my_items" />
+                        app:simpleItems="@array/country_list" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/userIntroOriginCity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -144,6 +143,7 @@
                     app:startIconTint="@color/colorPrimaryDark">
 
                     <AutoCompleteTextView
+                        android:id="@+id/userIntroOriginCity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#E9F2FF"
@@ -159,7 +159,6 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/userIntroPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -171,6 +170,7 @@
                 app:startIconTint="@color/colorPrimaryDark">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userIntroPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E9F2FF"
@@ -183,7 +183,6 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/userIntroLanguage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -196,18 +195,18 @@
                 app:startIconTint="@color/colorPrimaryDark">
 
                 <AutoCompleteTextView
+                    android:id="@+id/userIntroLanguage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E9F2FF"
                     android:backgroundTintMode="add"
                     android:inputType="none"
-                    app:simpleItems="@array/my_items" />
+                    app:simpleItems="@array/language_list" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/userIntroReferralCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -219,6 +218,7 @@
                 app:startIconTint="@color/colorPrimaryDark">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userIntroReferralCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E9F2FF"

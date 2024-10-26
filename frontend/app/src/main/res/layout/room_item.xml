@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="10dp"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_gravity="center">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Room Image -->
+            <ImageView
+                android:id="@+id/roomImage"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:alpha="0.3"
+                android:scaleType="fitXY"
+                android:src="@drawable/lyf_one" />
+
+            <!-- Room Rating -->
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/roomRating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/roomImage"
+                android:layout_alignBottom="@+id/roomImage"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="#FF9800"
+                android:rating="3"
+                android:scaleX=".6"
+                android:scaleY=".6"
+                android:stepSize="1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/roomRating"
+                android:layout_alignStart="@+id/roomRating"
+                android:layout_alignEnd="@+id/roomImage"
+                android:fontFamily="@font/quicksand_medium"
+                android:padding="2dp"
+                android:gravity="center"
+                android:text="3.0"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Room Name -->
+            <TextView
+                android:id="@+id/roomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="One of a kind"
+                android:textColor="#000000"
+                android:fontFamily="@font/quicksand_medium"
+                android:textSize="15sp"
+                android:paddingTop="2dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/roomSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max 3 pax"
+                android:drawableStart="@drawable/baseline_person_10"
+                android:fontFamily="@font/quicksand_medium"
+                android:textSize="7sp"
+                android:drawablePadding="2dp"
+                android:paddingBottom="0dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <!-- Room Details -->
+            <TextView
+                android:id="@+id/roomLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lyf Funan, Singapore"
+                android:drawableStart="@drawable/baseline_location_on_24"
+                android:drawablePadding="1dp"
+                android:textColor="#000000"
+                android:textSize="6sp"
+                android:layout_marginBottom="3dp"
+                android:paddingTop="2dp" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_marginEnd="8dp"
+                android:paddingTop="8dp"
+                android:orientation="vertical">
+
+
+                <!-- Room amenities in bullet points-->
+
+                <TextView
+                    android:id="@+id/roomAmenitiesFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022 Wifi"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="8sp"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/roomAmenitiesSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022 Sea View"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/roomAmenitiesThird"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022 Light Color"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="8sp" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center">
+                    <!-- Room Price -->
+                    <TextView
+                        android:id="@+id/roomPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$7000"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textSize="12sp"
+                        android:paddingTop="8dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/roomPricePerX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/month"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textSize="10sp"
+                        android:paddingTop="8dp"
+                        android:paddingLeft="1dp" />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -42,17 +42,20 @@ public class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.On
     class OnboardingViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView imageView;
-        private TextView textView;
+        private TextView title;
+        private TextView description;
 
         public OnboardingViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.onboardingImage);
-            textView = itemView.findViewById(R.id.onboardingText);
+            title = itemView.findViewById(R.id.onboardingTitle);
+            description = itemView.findViewById(R.id.onboardingText);
         }
 
         public void bind(OnboardingItem onboardingItem) {
             imageView.setImageResource(onboardingItem.getImage());
-            textView.setText(onboardingItem.getText());
+            title.setText(onboardingItem.getText());
+            description.setText(onboardingItem.getDescription());
         }
     }
 }

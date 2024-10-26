@@ -80,7 +80,7 @@
             >
 
             <com.chaos.view.PinView
-                android:id="@+id/firstPinView"
+                android:id="@+id/otpText"
                 style="@style/PinWidget.PinView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
 
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:id="@+id/registerProgressBar"
+            android:id="@+id/otpProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -177,13 +177,13 @@
         </com.google.android.material.progressindicator.CircularProgressIndicator>
         <!-- Circular Button with Arrow -->
         <Button
-            android:id="@+id/buttonNext"
+            android:id="@+id/otpSubmitButton"
             android:layout_width="90dp"
             android:layout_height="90dp"
-            android:layout_alignStart="@+id/registerProgressBar"
-            android:layout_alignTop="@+id/registerProgressBar"
-            android:layout_alignEnd="@+id/registerProgressBar"
-            android:layout_alignBottom="@+id/registerProgressBar"
+            android:layout_alignStart="@+id/otpProgressBar"
+            android:layout_alignTop="@+id/otpProgressBar"
+            android:layout_alignEnd="@+id/otpProgressBar"
+            android:layout_alignBottom="@+id/otpProgressBar"
             android:layout_gravity="center"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"

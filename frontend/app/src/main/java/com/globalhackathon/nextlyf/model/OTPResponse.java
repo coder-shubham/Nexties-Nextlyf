@@ -2,20 +2,20 @@ package com.globalhackathon.nextlyf.model;
 
 public class OTPResponse {
 
-    private String emailId;
+    private String email;
     private String otp;
 
     public OTPResponse(String emailId, String otp) {
-        this.emailId = emailId;
+        this.email = emailId;
         this.otp = otp;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setOtp(String otp) {

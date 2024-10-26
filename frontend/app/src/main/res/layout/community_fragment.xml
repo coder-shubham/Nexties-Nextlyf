@@ -1,0 +1,48 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TabLayout for the tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/communityTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/colorPrimaryDark" >
+
+        <!-- Tab items -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hub"
+            android:icon="@drawable/ic_hub"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nexus"
+            android:icon="@drawable/ic_nexus_new" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circles"
+            android:icon="@drawable/ic_group"/>
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- ViewPager2 for sliding between tabs -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/communityViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+</LinearLayout>

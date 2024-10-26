@@ -59,7 +59,8 @@ public class UserIntroQueSetThreeFragment extends Fragment {
                 }
                 // You can now use the selectedChipTexts list as needed
                 Log.d("SelectedChips 2", selectedChipTexts.toString());
-                userSignUpData.setHobbies(selectedChipTexts);
+                String commaSeparatedString = String.join(",", selectedChipTexts);
+                userSignUpData.setHobbies(commaSeparatedString);
             });
         }
 

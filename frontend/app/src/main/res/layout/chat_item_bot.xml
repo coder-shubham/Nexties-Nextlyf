@@ -1,0 +1,24 @@
+<!-- chat_item_bot.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="start">
+
+    <TextView
+        android:id="@+id/text_view_message_bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/nextlyf_mainlogo_std_sma"
+        android:padding="10dp"
+        android:text="Hey Raju! How I can help you today?wjwejwe ewjejwjew jwejwenwewjenwjjwenwjenw"
+        android:textSize="14sp"
+        android:fontFamily="@font/quicksand_medium"
+        android:background="@drawable/receive_drawable"
+        android:drawablePadding="10dp"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>

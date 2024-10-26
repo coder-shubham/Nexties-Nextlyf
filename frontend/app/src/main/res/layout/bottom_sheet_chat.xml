@@ -1,0 +1,69 @@
+<!-- bottom_sheet_chat.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/chatTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/round_textbg"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_text_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type a message" />
+
+        <ImageButton
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send"
+            android:contentDescription="Send message" />
+
+        <ImageButton
+            android:id="@+id/mic_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_mic_24"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/chatListeningLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.globalhackathon.nextlyf.view.AudioWaveView
+            android:id="@+id/audioWaveView"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:id="@+id/button_cross"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/cross_small"
+            android:background="?attr/selectableItemBackground"
+            android:layout_margin="16dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

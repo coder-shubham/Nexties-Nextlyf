@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="http://schemas.android.com/tools">
+<resources>
+    <string-array name="australia_city_list">
+        <item>Sydney</item>
+        <item>Melbourne</item>
+        <item>Brisbane</item>
+        <item>Perth</item>
+        <item>Adelaide</item>
+    </string-array>
+    <string-array name="canada_city_list">
+        <item>Toronto</item>
+        <item>Vancouver</item>
+        <item>Montreal</item>
+        <item>Calgary</item>
+        <item>Ottawa</item>
+    </string-array>
+    <string-array name="china_city_list">
+        <item>Beijing</item>
+        <item>Shanghai</item>
+        <item>Shenzhen</item>
+        <item>Guangzhou</item>
+        <item>Chengdu</item>
+    </string-array>
     <array name="com_google_android_gms_fonts_certs">
         <item>@array/com_google_android_gms_fonts_certs_dev</item>
         <item>@array/com_google_android_gms_fonts_certs_prod</item>
@@ -14,10 +35,116 @@
             MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK
         </item>
     </string-array>
+    <string-array name="country_list">
+        <item>United States</item>
+        <item>Canada</item>
+        <item>United Kingdom</item>
+        <item>Australia</item>
+        <item>India</item>
+        <item>Germany</item>
+        <item>France</item>
+        <item>China</item>
+        <item>Japan</item>
+        <item>Singapore</item> 
+        <item>South Africa</item>
+    </string-array>
+    <string-array name="france_city_list">
+        <item>Paris</item>
+        <item>Marseille</item>
+        <item>Lyon</item>
+        <item>Toulouse</item>
+        <item>Nice</item>
+        <item>Nantes</item>
+        <item>Strasbourg</item>
+        <item>Montpellier</item>
+        <item>Bordeaux</item>
+        <item>Lille</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-binary</item>
+        <item>Prefer not to say</item>
+    </string-array>
+    <string-array name="germany_city_list">
+        <item>Berlin</item>
+        <item>Hamburg</item>
+        <item>Munich</item>
+        <item>Cologne</item>
+        <item>Frankfurt</item>
+        <item>Stuttgart</item>
+        <item>Düsseldorf</item>
+        <item>Dortmund</item>
+        <item>Essen</item>
+        <item>Leipzig</item>
+    </string-array>
+    <string-array name="india_city_list">
+        <item>Mumbai</item>
+        <item>Delhi</item>
+        <item>Bangalore</item>
+        <item>Hyderabad</item>
+        <item>Chennai</item>
+    </string-array>
+    <string-array name="japan_city_list">
+        <item>Tokyo</item>
+        <item>Osaka</item>
+        <item>Yokohama</item>
+        <item>Nagoya</item>
+        <item>Sapporo</item>
+        <item>Kobe</item>
+        <item>Kyoto</item>
+        <item>Fukuoka</item>
+        <item>Kawasaki</item>
+        <item>Saitama</item>
+    </string-array>
+    <string-array name="language_list">
+        <item>English</item>
+        <item>Mandarin Chinese</item> 
+        <item>Malay</item> 
+        <item>Spanish</item>
+        <item>Hindi</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Arabic</item>
+        <item>Tamil</item> 
+    </string-array>
     <string-array name="my_items">
         <item>Item 1</item>
         <item>Item 2</item>
         <item>Item 3</item>
+    </string-array>
+    <string-array name="singapore_city_list">
+        <item>Singapore</item> 
+    </string-array>
+    <string-array name="south_korea_city_list">
+        <item>Seoul</item>
+        <item>Busan</item>
+        <item>Incheon</item>
+        <item>Daegu</item>
+        <item>Daejeon</item>
+        <item>Gwangju</item>
+        <item>Suwon</item>
+        <item>Ulsan</item>
+        <item>Changwon</item>
+        <item>Seongnam</item>
+    </string-array>
+    <string-array name="uk_city_list">
+        <item>London</item>
+        <item>Manchester</item>
+        <item>Birmingham</item>
+        <item>Glasgow</item>
+        <item>Liverpool</item>
+    </string-array>
+    <string-array name="us_city_list">
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+        <item>Houston</item>
+        <item>Phoenix</item>
     </string-array>
     <color name="black">#FF000000</color>
     <color name="colorAccent">#3377de</color>
@@ -32,17 +159,23 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDOVxqacvAm20ruBw5rdBmBuBY8VjA14hE</string>
     <string name="google_storage_bucket" translatable="false">nextlyf-2609e.appspot.com</string>
     <string name="project_id" translatable="false">nextlyf-2609e</string>
-    <style name="Base.Theme.Nextlyf" parent="Theme.Material3.DayNight.NoActionBar">
+    <string name="strikePrice"> <strike>8000</strike> </string>
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
         
-        
-
-        <item name="android:windowLightNavigationBar" ns1:targetApi="29">true</item>
-        <item name="android:windowLightStatusBar">true</item>
-
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
+        <item name="colorTertiary">@android:color/transparent</item>
     </style>
-    <style name="Theme.Nextlyf" parent="Base.Theme.Nextlyf"/>
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="Theme.Nextlyf" parent="AppTheme"/>
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorSurface">@android:color/transparent</item>
+        <item name="colorOnSurfaceVariant">@android:color/transparent</item>
+    </style>
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
 </resources>

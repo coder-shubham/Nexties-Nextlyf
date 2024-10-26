@@ -39,6 +39,8 @@ public class SignUpActivity extends AppCompatActivity implements OTPVerification
     FragmentManager fragmentManager;
     OTPFragment otpFragment;
     APIManager apiManager;
+
+    String email;
 //    private TextInputEditText dobEditText;
 //    private Calendar calendar;
     private RadioButton[] radioButtons;
@@ -51,14 +53,17 @@ public class SignUpActivity extends AppCompatActivity implements OTPVerification
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        apiManager = new APIManager();
+        apiManager = new APIManager(APIManager.BACKEND_BASE_URL);
         fragmentManager = getSupportFragmentManager();
+
+        signUpBinding.registerProgressBar.setVisibility(View.GONE);
+        signUpBinding.registerProgressBar.setIndeterminate(false);
 
 
         signUpBinding.registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = signUpBinding.registerEmailText.getText().toString();
+                email = signUpBinding.registerEmailText.getText().toString();
                 String password = signUpBinding.registerPassText.getText().toString();
 
                 if (email.isEmpty()) {
@@ -78,6 +83,7 @@ public class SignUpActivity extends AppCompatActivity implements OTPVerification
                         @Override
                         public void onResponse(OTPResponse otpResponse) {
 
+
                             //start Fragment to enter OTP
 
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -85,10 +91,10 @@ public class SignUpActivity extends AppCompatActivity implements OTPVerification
                             Bundle args = new Bundle();
                             args.putString("email", email);
                             args.putString("password", password);
-//                            args.putString("otp", otpResponse.getOtp());
+                            args.putString("otp", otpResponse.getOtp());
                             otpFragment.setArguments(args);
-                            fragmentTransaction.add(signUpBinding.otpFrameLayout.getId(), otpFragment);
-                            signUpBinding.registerLayout.setVisibility(View.GONE);
+                            fragmentTransaction.add(signUpBinding.mainRegisterLayout.getId(), otpFragment);
+//                            signUpBinding.registerLayout.setVisibility(View.GONE);
                             fragmentTransaction.commit();
 
 
@@ -112,6 +118,7 @@ public class SignUpActivity extends AppCompatActivity implements OTPVerification
         signUpBinding.registerProgressBar.setVisibility(View.GONE);
         getSupportFragmentManager().beginTransaction().remove(otpFragment).commit();
         Intent intent = new Intent(SignUpActivity.this, UserIntroActivity.class);
+        intent.putExtra("email", email);
         startActivity(intent);
         finish();
     }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.globalhackathon.nextlyf.app-mergeDebugResources-53:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "outputFile": "com.globalhackathon.nextlyf.app-mergeDebugResources-54:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/shubhamsarraf/.gradle/caches/transforms-3/1c1bdf661087038d3af070480e739fe7/transformed/material-1.12.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "source": "/Users/shubhamsarraf/.gradle/caches/8.9/transforms/2f7c48074cca10e133a353f75f828dde/transformed/material-1.12.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

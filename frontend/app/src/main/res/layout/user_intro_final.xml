@@ -10,11 +10,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
+        android:layout_weight="1"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/quicksand_medium"
         android:text="Welcome to LYF! Your journey to a dynamic, creative, and connected living experience begins here."
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         android:shadowColor="@color/colorPrimary"
         android:shadowRadius="10"/>
@@ -22,7 +23,9 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:padding="10dp"
         android:src="@drawable/welcome_image"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
