@@ -36,7 +36,9 @@ import com.globalhackathon.nextlyf.fragments.LoyaltyPointsPopUpFragment;
 import com.globalhackathon.nextlyf.fragments.OTPFragment;
 import com.globalhackathon.nextlyf.listeners.RecommendationListener;
 import com.globalhackathon.nextlyf.model.Category;
+import com.globalhackathon.nextlyf.model.Events;
 import com.globalhackathon.nextlyf.model.RecommendationRequest;
+import com.globalhackathon.nextlyf.model.Rooms;
 import com.globalhackathon.nextlyf.model.SearchResult;
 import com.globalhackathon.nextlyf.model.SharedSpace;
 import com.globalhackathon.nextlyf.model.UserDetails;
@@ -61,6 +63,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.Executors;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -69,6 +72,10 @@ public class HomeActivity extends AppCompatActivity {
     private CategoryAdapter categoryAdapter;
     private List<Category> categories;
     private List<SharedSpace> sharedSpaceList;
+    private List<Rooms> roomsList;
+    private List<UserSignUpData> userSignUpDataList;
+
+    private List<Events> eventsList;
 
     private FirebaseFirestore db;
     private FirebaseAuth mAuth;
@@ -121,10 +128,14 @@ public class HomeActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         communityFragments = new CommunityFragments();
 
-        roomAdapter = new RoomAdapter();
-        eventAdapter = new EventAdapter();
-        connectionAdapter = new ConnectionAdapter();
+
         sharedSpaceList = new ArrayList<SharedSpace>();
+        roomsList = new ArrayList<Rooms>();
+        userSignUpDataList = new ArrayList<>();
+        eventsList = new ArrayList<>();
+        roomAdapter = new RoomAdapter(roomsList);
+        eventAdapter = new EventAdapter(eventsList);
+        connectionAdapter = new ConnectionAdapter(userSignUpDataList);
         sharedSpaceAdapter = new SharedSpaceAdapter(sharedSpaceList);
 
         // Create mock data
@@ -134,18 +145,18 @@ public class HomeActivity extends AppCompatActivity {
         // Properties category with its items
         List<SearchResult> properties = new ArrayList<>();
         properties.add(new SearchResult("Lyf Funan", "Singapore", 4.5));
-        properties.add(new SearchResult("Lyf Mid", "Singapore", 4.0));
-        properties.add(new SearchResult("Lyf High", "Singapore", 3.9));
+        properties.add(new SearchResult("Lyf One-North", "Singapore", 4.0));
+        properties.add(new SearchResult("Lyf Farrer Park", "Singapore", 3.9));
 
         // Rooms category with its items
         List<SearchResult> rooms = new ArrayList<>();
-        rooms.add(new SearchResult("Room 101", "Singapore", 3.8));
-        rooms.add(new SearchResult("Room 102", "Singapore", 4.1));
+        rooms.add(new SearchResult("One of a Kind Plus", "Singapore", 3.8));
+        rooms.add(new SearchResult("All Together", "Singapore", 4.1));
 
         // Events category with its items
         List<SearchResult> events = new ArrayList<>();
-        events.add(new SearchResult("Event ABC", "Singapore", 4.9));
-        events.add(new SearchResult("Event XYZ", "Singapore", 4.7));
+        events.add(new SearchResult("Halloween 2024", "Singapore", 4.9));
+        events.add(new SearchResult("Switch 2024", "Singapore", 4.7));
 
         // Adding the categories to the list
         categories.add(new Category("Properties", properties, false));  // Collapsed by default
@@ -154,7 +165,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         binding.appName.setText(String.format("%s\n%s", getGreetingMessage(), userSignUpData.getName()));
-        binding.loyaltyPoints.setText(isFromSignUp ? "100": "200");
+        binding.loyaltyPoints.setText(isFromSignUp ? "100" : "200");
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         roomRecyclerView.setLayoutManager(layoutManager);
@@ -173,10 +184,10 @@ public class HomeActivity extends AppCompatActivity {
         eventsRecyclerView.setAdapter(eventAdapter);
 
 
-
         Log.d("HomeActivity", "Getting Room Recommendation");
         getRoomRecommendation();
-
+        getUserRecommendation();
+        getEventRecommendation();
 
         binding.searchView.addTransitionListener(new SearchView.TransitionListener() {
 
@@ -198,38 +209,38 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View view) {
-            showBottomSheetDialog();
-         }
-         });
-
-        binding.updateMlUrlButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                apiManager.setCustomUrl(binding.mlBaseUrlText.getText().toString());
-                Toast.makeText(HomeActivity.this, "ML URL updated", Toast.LENGTH_SHORT).show();
+                showBottomSheetDialog();
             }
         });
 
-        binding.bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener(){
+//        binding.updateMlUrlButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                apiManager.setCustomUrl(binding.mlBaseUrlText.getText().toString());
+//                Toast.makeText(HomeActivity.this, "ML URL updated", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+        binding.bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                if(item.getItemId() == R.id.navigation_home){
+                if (item.getItemId() == R.id.navigation_home) {
                     Log.d("HomeActivity", "Home clicked");
                     binding.homeScrollView.setVisibility(View.VISIBLE);
                     binding.searchBarLayout.setVisibility(View.VISIBLE);
-                    binding.mlUrlLayout.setVisibility(View.VISIBLE);
+//                    binding.mlUrlLayout.setVisibility(View.VISIBLE);
                     binding.communityFrameLayout.setVisibility(View.GONE);
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.remove(communityFragments);
                     fragmentTransaction.commit();
                     return true;
-                }else if(item.getItemId() == R.id.navigation_explore) {
+                } else if (item.getItemId() == R.id.navigation_explore) {
                     Log.d("HomeActivity", "Connections clicked");
                     return true;
-                }else if(item.getItemId() == R.id.navigation_community) {
+                } else if (item.getItemId() == R.id.navigation_community) {
 
                     //Start Community Fragment
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -238,17 +249,17 @@ public class HomeActivity extends AppCompatActivity {
                     fragmentTransaction.addToBackStack("Community");
                     binding.homeScrollView.setVisibility(View.GONE);
                     binding.searchBarLayout.setVisibility(View.GONE);
-                    binding.mlUrlLayout.setVisibility(View.GONE);
+//                    binding.mlUrlLayout.setVisibility(View.GONE);
 //                            signUpBinding.registerLayout.setVisibility(View.GONE);
                     fragmentTransaction.commit();
 
 
                     Log.d("HomeActivity", "Community clicked");
                     return true;
-                }else if(item.getItemId() == R.id.navigation_account) {
+                } else if (item.getItemId() == R.id.navigation_account) {
                     Log.d("HomeActivity", "Account clicked");
                     return true;
-                }else {
+                } else {
                     return false;
                 }
             }
@@ -265,16 +276,14 @@ public class HomeActivity extends AppCompatActivity {
                     fragmentManager.beginTransaction().remove(fragment).commit();
                     binding.homeScrollView.setVisibility(View.VISIBLE);
                     binding.searchBarLayout.setVisibility(View.VISIBLE);
-                    binding.mlUrlLayout.setVisibility(View.VISIBLE);
+//                    binding.mlUrlLayout.setVisibility(View.VISIBLE);
                     FragmentManager childFragmentManager = fragment.getChildFragmentManager();
                     if (childFragmentManager.getBackStackEntryCount() > 0) {
                         childFragmentManager.popBackStack();
                     }
                     binding.bottomNavigation.setSelectedItemId(R.id.navigation_home);
                     return;
-                }
-
-                else{
+                } else {
                     // Remove this callback and call the next one in the chain
                     Log.d("HomeActivity", "Back Pressed");
                     this.remove();
@@ -324,16 +333,16 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    private void getRoomRecommendation(){
+    private void getRoomRecommendation() {
 
-        try{
+        try {
             DateTime dateTime = DateTime.parseFrom(userSignUpData.getDob().getBytes());
             Date date = new Date(userSignUpData.getDob());
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yy");
 
             userSignUpData.setDob(userSignUpData.getDob() != null ?
                     formatter.format(userSignUpData.getDob()) : "07/07/99");
-        }catch (Exception ex){
+        } catch (Exception ex) {
             Log.d("HomeActivity", "Date Exception: " + ex.getMessage());
             userSignUpData.setDob("07/07/99");
         }
@@ -343,7 +352,7 @@ public class HomeActivity extends AppCompatActivity {
         RecommendationRequest recommendationRequest = new RecommendationRequest(userSignUpData,
                 "rooms");
 
-        try{
+        try {
             apiManager.getRecommendation(recommendationRequest, new RecommendationListener() {
                 @Override
                 public void onRecommendationSuccess(List<String> response) {
@@ -358,18 +367,27 @@ public class HomeActivity extends AppCompatActivity {
                             .addOnSuccessListener(queryDocumentSnapshots -> {
                                 if (!queryDocumentSnapshots.isEmpty()) {
                                     // Iterate through the documents and process each user document
+                                    List<Rooms> tempList = new ArrayList<>();
                                     for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
+                                        Rooms room = document.toObject(Rooms.class);
                                         Map<String, Object> roomData = document.getData();
                                         Log.d("Firestore", "Room ID: " + document.getId() + " Data: " + roomData);
+                                        tempList.add(room);
                                     }
+
+                                    runOnUiThread(() -> {
+                                        roomsList.clear();
+                                        roomsList.addAll(tempList);
+                                        roomAdapter.notifyDataSetChanged();
+                                    });
                                 } else {
                                     Log.d("Firestore", "[Room ]No matching documents found.");
                                 }
                             })
                             .addOnFailureListener(e -> {
-                                Log.w("Firestore", "[Room ]Error retrieving documents", e);
+                                        Log.w("Firestore", "[Room ]Error retrieving documents", e);
 
-                            }
+                                    }
                             );
 
                 }
@@ -377,22 +395,80 @@ public class HomeActivity extends AppCompatActivity {
                 @Override
                 public void onRecommendationFailure(String response) {
                     Log.d("HomeActivity", "[Room ]Recommendation Failure: " + response);
+                    Executors.newSingleThreadExecutor().execute(() -> {
+                        db.collection("rooms")
+                                .get()
+                                .addOnSuccessListener(queryDocumentSnapshots -> {
+                                    Log.d("HomeActivity", "Rooms data loaded successfully QueryDocumentSnapshots: " +
+                                            queryDocumentSnapshots.size());
+                                    List<Rooms> tempList = new ArrayList<>(); // Temporary list to avoid main thread blocking
+                                    for (DocumentSnapshot document : queryDocumentSnapshots) {
+                                        Rooms room = document.toObject(Rooms.class);
+                                        Log.d("HomeActivity", "Room: " + room.toString());
+                                        tempList.add(room);
+                                    }
+                                    // Update RecyclerView on the main thread
+                                    runOnUiThread(() -> {
+                                        roomsList.clear();
+                                        roomsList.addAll(tempList);
+                                        roomAdapter.notifyDataSetChanged();
+                                    });
+
+
+                                })
+                                .addOnFailureListener(e -> {
+                                    // Handle any errors
+                                    Log.d("HomeActivity", "Failed to load SharedSpace data: " + e.getMessage());
+                                });
+
+                    });
 
                 }
             });
-        }catch (Exception ex){
+        } catch (Exception ex) {
             Log.d("HomeActivity", "[Room ]Recommendation Exception: " + ex.getMessage());
 
         }
 
     }
 
-    private void getUserRecommendation(){
+    private void getEventRecommendation(){
+
+        try {
+            db.collection("events")
+                    .get()
+                    .addOnSuccessListener(queryDocumentSnapshots -> {
+                        List<Events> tempList = new ArrayList<>();
+                        for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
+                            Events events = document.toObject(Events.class);
+                            Map<String, Object> userDate = document.getData();
+                            Log.d("Firestore", "Event ID: " + document.getId() + " Data: " + userDate);
+                            tempList.add(events);
+                        }
+
+                        runOnUiThread(() -> {
+                            eventsList.clear();
+                            eventsList.addAll(tempList);
+                            eventAdapter.notifyDataSetChanged();
+                        });
+                    })
+                    .addOnFailureListener(e -> {
+                                Log.w("Firestore", "[Events]Error retrieving documents", e);
+
+                            }
+                    );
+        }catch (Exception ex){
+            Log.d("HomeActiving", "Error in Events");
+        }
+
+    }
+
+    private void getUserRecommendation() {
 
         RecommendationRequest recommendationRequest = new RecommendationRequest(userSignUpData,
-                "users");
+                "friends");
 
-        try{
+        try {
             apiManager.getRecommendation(recommendationRequest, new RecommendationListener() {
                 @Override
                 public void onRecommendationSuccess(List<String> response) {
@@ -405,15 +481,19 @@ public class HomeActivity extends AppCompatActivity {
                             .whereIn(FieldPath.documentId(), response)
                             .get()
                             .addOnSuccessListener(queryDocumentSnapshots -> {
-                                if (!queryDocumentSnapshots.isEmpty()) {
-                                    // Iterate through the documents and process each user document
-                                    for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
-                                        Map<String, Object> roomData = document.getData();
-                                        Log.d("Firestore", "User ID: " + document.getId() + " Data: " + roomData);
-                                    }
-                                } else {
-                                    Log.d("Firestore", "[Users]No matching documents found.");
+                                List<UserSignUpData> tempList = new ArrayList<>();
+                                for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
+                                    UserSignUpData userSignUpData = document.toObject(UserSignUpData.class);
+                                    Map<String, Object> userDate = document.getData();
+                                    Log.d("Firestore", "User ID: " + document.getId() + " Data: " + userDate);
+                                    tempList.add(userSignUpData);
                                 }
+
+                                runOnUiThread(() -> {
+                                    userSignUpDataList.clear();
+                                    userSignUpDataList.addAll(tempList);
+                                    connectionAdapter.notifyDataSetChanged();
+                                });
                             })
                             .addOnFailureListener(e -> {
                                         Log.w("Firestore", "[Users]Error retrieving documents", e);
@@ -427,22 +507,43 @@ public class HomeActivity extends AppCompatActivity {
                 public void onRecommendationFailure(String response) {
                     Log.d("HomeActivity", "[Users]Recommendation Failure: " + response);
 
-                    List<String> roomIds = new ArrayList<>();
-                    roomIds.add("8QnxJUDM4vaUEE2KfBxq");
-                    roomIds.add("cIaj6mIzgASO1cuRBCpb");
+                    db.collection("users")
+                            .limit(10)
+                            .get()
+                            .addOnSuccessListener(queryDocumentSnapshots -> {
+                                List<UserSignUpData> tempList = new ArrayList<>();
+                                for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
+                                    UserSignUpData userSignUpData = document.toObject(UserSignUpData.class);
+                                    Map<String, Object> userDate = document.getData();
+                                    Log.d("Firestore", "User ID: " + document.getId() + " Data: " + userDate);
+                                    tempList.add(userSignUpData);
+                                }
+
+                                runOnUiThread(() -> {
+                                    userSignUpDataList.clear();
+                                    userSignUpDataList.addAll(tempList);
+                                    connectionAdapter.notifyDataSetChanged();
+                                });
+                            })
+                            .addOnFailureListener(e -> {
+                                        Log.w("Firestore", "[Users]Error retrieving documents", e);
+
+                                    }
+                            );
 
                 }
             });
-        }catch (Exception ex){
+        } catch (Exception ex) {
             Log.d("HomeActivity", "[Users]Recommendation Exception: " + ex.getMessage());
 
         }
 
     }
+
     private void showBottomSheetDialog() {
         String sessionId = UUID.randomUUID().toString();
-        UserDetails userDetails = new UserDetails("Shubham", "20-25");
-        BottomSheetChatBotFragment bottomSheetDialogFragment = new BottomSheetChatBotFragment(sessionId, userDetails);
+        UserDetails userDetails = new UserDetails(userSignUpData != null && userSignUpData.getName() != null ? userSignUpData.getName(): "Shubham", "20-25");
+        BottomSheetChatBotFragment bottomSheetDialogFragment = new BottomSheetChatBotFragment(sessionId, userDetails, userSignUpData);
         bottomSheetDialogFragment.show(getSupportFragmentManager(), "ModelBottomSheet");
     }
 
@@ -487,24 +588,36 @@ public class HomeActivity extends AppCompatActivity {
 
     private void loadDataFromFirestore() {
 
-        Log.d("HomeActivity", "Loading SharedSpace data from Firestore");
-        db.collection("sharedSpace")
-                .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    Log.d("HomeActivity", "SharedSpace data loaded successfully QueryDocumentSnapshots: " +
-                            queryDocumentSnapshots.size());
-                    for (DocumentSnapshot document : queryDocumentSnapshots) {
-                        SharedSpace sharedSpaces = document.toObject(SharedSpace.class);
-                        Log.d("HomeActivity", "SharedSpace: " + sharedSpaces.toString());
-                        sharedSpaceList.add(sharedSpaces);
-                    }
-                    sharedSpaceAdapter.notifyDataSetChanged();
-                })
-                .addOnFailureListener(e -> {
-                    // Handle any errors
-                    Log.d("HomeActivity", "Failed to load SharedSpace data: " + e.getMessage());
-                    Toast.makeText(this, "Failed to load data", Toast.LENGTH_SHORT).show();
-                });
+        Executors.newSingleThreadExecutor().execute(() -> {
+            db.collection("shared_space")
+                    .get()
+                    .addOnSuccessListener(queryDocumentSnapshots -> {
+                        Log.d("HomeActivity", "SharedSpace data loaded successfully QueryDocumentSnapshots: " +
+                                queryDocumentSnapshots.size());
+                        List<SharedSpace> tempList = new ArrayList<>(); // Temporary list to avoid main thread blocking
+                        for (DocumentSnapshot document : queryDocumentSnapshots) {
+                            SharedSpace sharedSpaces = document.toObject(SharedSpace.class);
+                            Log.d("HomeActivity", "SharedSpace: " + sharedSpaces.toString());
+                            tempList.add(sharedSpaces);
+                        }
+                        // Update RecyclerView on the main thread
+                        runOnUiThread(() -> {
+                            sharedSpaceList.clear();
+                            sharedSpaceList.addAll(tempList);
+                            sharedSpaceAdapter.notifyDataSetChanged();
+                        });
+
+
+                    })
+                    .addOnFailureListener(e -> {
+                        // Handle any errors
+                        Log.d("HomeActivity", "Failed to load SharedSpace data: " + e.getMessage());
+                        Toast.makeText(this, "Failed to load data", Toast.LENGTH_SHORT).show();
+                    });
+
+        });
+
+
     }
 
 

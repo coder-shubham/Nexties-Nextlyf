@@ -22,6 +22,8 @@ public class CommunityPrivateFragment extends Fragment {
 
     private ViewPager2 viewPager;
 
+    private CommunityPrivateChatAdapter communityPrivateChatAdapter;
+
 
     public CommunityPrivateFragment() {
         // Required empty public constructor
@@ -39,11 +41,11 @@ public class CommunityPrivateFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         communityPrivateFragmentBinding = CommunityPrivateFragmentBinding.inflate(inflater);
+        communityPrivateChatAdapter = new CommunityPrivateChatAdapter();
 
         communityPrivateFragmentBinding.userChatRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        communityPrivateFragmentBinding.userChatRecyclerView.setAdapter(new CommunityPrivateChatAdapter());
+        communityPrivateFragmentBinding.userChatRecyclerView.setAdapter(communityPrivateChatAdapter);
         communityPrivateFragmentBinding.userChatRecyclerView.addItemDecoration(new SpaceItemDecoration(16));
-
 
         communityPrivateFragmentBinding.userHighlightRecyclerView.setViewPager2(viewPager);
         communityPrivateFragmentBinding.userHighlightRecyclerView.setAdapter(new CommunityPrivateHighlightAdapter());

@@ -31,6 +31,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
+                android:id="@+id/carousel_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shubham"
@@ -38,11 +39,12 @@
                 android:textSize="15sp"
                 android:padding="5dp"
                 android:layout_marginBottom="20dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/quicksand_medium"
                 />
 
             <TextView
+                android:id="@+id/carousel_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Checked in Lyf Funan"
@@ -50,7 +52,7 @@
                 android:textSize="13sp"
                 android:padding="5dp"
                 android:layout_marginBottom="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/quicksand_medium"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>

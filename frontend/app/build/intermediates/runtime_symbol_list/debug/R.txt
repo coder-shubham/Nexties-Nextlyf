@@ -3092,9 +3092,11 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f080074
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f080075
 int drawable abc_textfield_search_material 0x7f080076
 int drawable abc_vector_test 0x7f080077
+int drawable art1 0x7f080162
 int drawable avatar 0x7f080078
 int drawable avd_hide_password 0x7f080079
 int drawable avd_show_password 0x7f08007a
+int drawable badminton 0x7f080161
 int drawable baseline_arrow_circle_right_24 0x7f08007b
 int drawable baseline_arrow_forward_24 0x7f08007c
 int drawable baseline_check_24 0x7f08007d
@@ -3146,6 +3148,7 @@ int drawable common_google_signin_btn_text_light_focused 0x7f0800a9
 int drawable common_google_signin_btn_text_light_normal 0x7f0800aa
 int drawable common_google_signin_btn_text_light_normal_background 0x7f0800ab
 int drawable connect 0x7f0800ac
+int drawable cookingfood 0x7f080163
 int drawable cross_circle_svgrepo_com 0x7f0800ad
 int drawable cross_small 0x7f0800ae
 int drawable design_fab_background 0x7f0800af
@@ -3156,7 +3159,18 @@ int drawable design_snackbar_background 0x7f0800b3
 int drawable dizzle 0x7f0800b4
 int drawable dot_active 0x7f0800b5
 int drawable dot_inactive 0x7f0800b6
+int drawable download 0x7f08015a
+int drawable download_1 0x7f08015b
+int drawable download_2 0x7f08015c
+int drawable download_3 0x7f08015d
+int drawable download_4 0x7f08015e
+int drawable download_5 0x7f08015f
+int drawable download_6 0x7f080160
+int drawable enviroment1 0x7f080164
 int drawable explore_svgrepo_com 0x7f0800b7
+int drawable fashion1 0x7f080165
+int drawable finance1 0x7f080166
+int drawable fitness1 0x7f080167
 int drawable globe_1_svgrepo_com 0x7f0800b8
 int drawable googleg_disabled_color_18 0x7f0800b9
 int drawable googleg_standard_color_18 0x7f0800ba
@@ -3304,6 +3318,7 @@ int drawable onboarding_connect 0x7f080142
 int drawable onboarding_connect_new 0x7f080143
 int drawable onboarding_loyalty 0x7f080155
 int drawable pv_invisible_image 0x7f080144
+int drawable reading1 0x7f080168
 int drawable receive_drawable 0x7f080145
 int drawable round_spinnerbg 0x7f080146
 int drawable round_textbg 0x7f080147
@@ -3314,10 +3329,13 @@ int drawable selector_radio_icon 0x7f08014b
 int drawable sent_drawable 0x7f08014c
 int drawable shared_space 0x7f08014d
 int drawable spinner_bg 0x7f08014e
+int drawable technology1 0x7f080169
 int drawable test_level_drawable 0x7f08014f
 int drawable tooltip_frame_dark 0x7f080150
 int drawable tooltip_frame_light 0x7f080151
+int drawable travel1 0x7f08016a
 int drawable welcome_image 0x7f080152
+int drawable yoga1 0x7f08016b
 int font alegreya_sans_medium 0x7f090000
 int font alegreya_sans_thin 0x7f090001
 int font kalam 0x7f090002
@@ -3451,6 +3469,7 @@ int id btnNext 0x7f0a0078
 int id btnSkip 0x7f0a0079
 int id buttonPanel 0x7f0a007a
 int id button_cross 0x7f0a007b
+int id button_join 0x7f0a02e8
 int id button_send 0x7f0a007c
 int id cache_measures 0x7f0a007d
 int id callMeasure 0x7f0a007e
@@ -3459,6 +3478,8 @@ int id carousel_description_text 0x7f0a0080
 int id carousel_header_text 0x7f0a0081
 int id carousel_image_view 0x7f0a0082
 int id carousel_item_container 0x7f0a0083
+int id carousel_subtitle 0x7f0a02e6
+int id carousel_title 0x7f0a02e7
 int id carryVelocity 0x7f0a0084
 int id categoryItemsRecyclerView 0x7f0a02d8
 int id categoryTitleTextView 0x7f0a02d9
@@ -3470,6 +3491,7 @@ int id center_vertical 0x7f0a0089
 int id chain 0x7f0a008a
 int id chain2 0x7f0a008b
 int id chains 0x7f0a008c
+int id chatJoiningLayout 0x7f0a02e9
 int id chatListeningLayout 0x7f0a008d
 int id chatTextLayout 0x7f0a008e
 int id chat_avatar 0x7f0a008f
@@ -3720,8 +3742,6 @@ int id message_count 0x7f0a017f
 int id mic_button 0x7f0a0180
 int id middle 0x7f0a0181
 int id mini 0x7f0a0182
-int id mlBaseUrlText 0x7f0a0183
-int id mlUrlLayout 0x7f0a0184
 int id month_grid 0x7f0a0185
 int id month_navigation_bar 0x7f0a0186
 int id month_navigation_fragment_toggle 0x7f0a0187
@@ -3817,6 +3837,8 @@ int id passwordFieldText 0x7f0a01e0
 int id password_toggle 0x7f0a01e1
 int id path 0x7f0a01e2
 int id pathRelative 0x7f0a01e3
+int id payButton 0x7f0a02e4
+int id payLayout 0x7f0a02e5
 int id peekHeight 0x7f0a01e4
 int id percent 0x7f0a01e5
 int id pin 0x7f0a01e6
@@ -3992,6 +4014,7 @@ int id top 0x7f0a028b
 int id topPanel 0x7f0a028c
 int id topToBottom 0x7f0a028d
 int id top_shape 0x7f0a028e
+int id totalRatingText 0x7f0a02e3
 int id touch_outside 0x7f0a028f
 int id transitionToEnd 0x7f0a0290
 int id transitionToStart 0x7f0a0291
@@ -4008,7 +4031,6 @@ int id unchecked 0x7f0a029b
 int id uniform 0x7f0a029c
 int id unlabeled 0x7f0a029d
 int id up 0x7f0a029e
-int id updateMlUrlButton 0x7f0a029f
 int id useLogo 0x7f0a02a0
 int id userChatRecyclerView 0x7f0a02a1
 int id userGroupChatRecyclerView 0x7f0a02a2

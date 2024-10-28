@@ -101,7 +101,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:orientation="horizontal"
             android:padding="3dp">
 
@@ -118,7 +118,7 @@
                         android:id="@+id/roomName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="One of a kind"
+                        android:text="One of a kind Plus"
                         android:textColor="#000000"
                         android:fontFamily="@font/quicksand_medium"
                         android:textSize="15sp"
@@ -170,6 +170,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/roomPriceLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
@@ -211,7 +212,7 @@
                     android:stepSize="1" />
 
                 <TextView
-                    android:id="@+id/roomAmenitiesSecond"
+                    android:id="@+id/totalRatingText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="(7000 reviews)"
@@ -277,14 +278,28 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/payLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
 
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/payButton"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="Pay Now"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:padding="4dp"
+                        android:textSize="5sp"
+                        android:textColor="#000000">
 
-
-
-
-
-
-
+                    </com.google.android.material.button.MaterialButton>
+                </LinearLayout>
 
             </LinearLayout>
 

@@ -52,11 +52,13 @@ public class SharedSpaceAdapter extends RecyclerView.Adapter{
 
         viewHolder.binding.roomName.setText(sharedSpace.getSpaceName());
 
-        viewHolder.binding.roomSize.setText(String.format("Max %s sqft",
+        viewHolder.binding.roomSize.setText(String.format("Max %s pax",
                 sharedSpace.getSpaceCapacity()));
 
-        viewHolder.binding.roomAmenitiesFirst.setText(sharedSpace.getSpaceMain()
-                .replace(",", " \u2022"));
+        viewHolder.binding.roomAmenitiesFirst.setText(sharedSpace.getSpaceMain() != null ? sharedSpace.getSpaceMain()
+                .replace(",", " \u2022"):"Bond \u2022 Connect \u2022 Memory");
+
+        viewHolder.binding.roomLocation.setText(sharedSpace.getSpaceLocation());
 
         viewHolder.binding.roomPriceLayout.setVisibility(View.GONE);
 

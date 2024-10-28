@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:background="@drawable/round_textbg"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/edit_text_message"
@@ -46,8 +47,7 @@
     <FrameLayout
         android:id="@+id/chatListeningLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:layout_height="wrap_content">
 
         <com.globalhackathon.nextlyf.view.AudioWaveView
             android:id="@+id/audioWaveView"
@@ -63,6 +63,21 @@
             android:src="@drawable/cross_small"
             android:background="?attr/selectableItemBackground"
             android:layout_margin="16dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/chatJoiningLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button_join"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join the conversation"
+            />
 
     </FrameLayout>
 

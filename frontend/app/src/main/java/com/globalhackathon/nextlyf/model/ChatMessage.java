@@ -5,6 +5,7 @@ public class ChatMessage {
     private String text;
     private Boolean isBot;
     private Boolean isRoomObject;
+    private Boolean tempIsRoomObject;
 
     public ChatMessage(String text, Boolean isBot) {
         this.text = text;
@@ -33,5 +34,13 @@ public class ChatMessage {
 
     public void setIsRoomObject(Boolean isRoomObject) {
         this.isRoomObject = isRoomObject;
+    }
+
+    public Boolean getTempIsRoomObject() {
+        return tempIsRoomObject == null ? false : tempIsRoomObject;
+    }
+
+    public void setTempIsRoomObject(Boolean tempIsRoomObject) {
+        this.tempIsRoomObject = tempIsRoomObject;
     }
 }

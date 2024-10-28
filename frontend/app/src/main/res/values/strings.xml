@@ -157,5 +157,5 @@
         <item>Tamil</item> <!-- One of the official languages of Singapore -->
     </string-array>
 
-    <string name="strikePrice"> <strike>8000</strike> </string>
+    <string name="strikePrice"> <strike>800</strike> </string>
 </resources>

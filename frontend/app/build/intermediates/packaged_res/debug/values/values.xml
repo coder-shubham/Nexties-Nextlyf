@@ -159,7 +159,7 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDOVxqacvAm20ruBw5rdBmBuBY8VjA14hE</string>
     <string name="google_storage_bucket" translatable="false">nextlyf-2609e.appspot.com</string>
     <string name="project_id" translatable="false">nextlyf-2609e</string>
-    <string name="strikePrice"> <strike>8000</strike> </string>
+    <string name="strikePrice"> <strike>800</strike> </string>
     <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>

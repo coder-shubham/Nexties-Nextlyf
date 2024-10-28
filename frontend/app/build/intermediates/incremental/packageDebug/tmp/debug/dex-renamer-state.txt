@@ -1,4 +1,4 @@
-#Sat Oct 26 11:29:52 IST 2024
+#Tue Oct 29 00:51:52 SGT 2024
 base.0=/Users/shubhamsarraf/hackathon/hackbangalore/Nexties-Nextlyf/frontend/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/shubhamsarraf/hackathon/hackbangalore/Nexties-Nextlyf/frontend/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.10=/Users/shubhamsarraf/hackathon/hackbangalore/Nexties-Nextlyf/frontend/app/build/intermediates/dex/debug/mergeExtDexDebug/classes4.dex

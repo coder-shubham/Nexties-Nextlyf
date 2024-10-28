@@ -25,27 +25,40 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.globalhackathon.nextlyf.adapter.ChatBotAdapter;
+import com.globalhackathon.nextlyf.adapter.RoomAdapter;
 import com.globalhackathon.nextlyf.api.APIManager;
 import com.globalhackathon.nextlyf.databinding.BottomSheetChatBinding;
 import com.globalhackathon.nextlyf.listeners.ChatResponseListener;
+import com.globalhackathon.nextlyf.listeners.PaymentConfirmationListener;
+import com.globalhackathon.nextlyf.listeners.RecommendationListener;
 import com.globalhackathon.nextlyf.model.ChatMessage;
 import com.globalhackathon.nextlyf.model.ChatRequest;
+import com.globalhackathon.nextlyf.model.RecommendationRequest;
+import com.globalhackathon.nextlyf.model.Rooms;
 import com.globalhackathon.nextlyf.model.UserDetails;
+import com.globalhackathon.nextlyf.model.UserSignUpData;
 import com.globalhackathon.nextlyf.utils.SpaceItemDecoration;
 import com.globalhackathon.nextlyf.view.AudioWaveView;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldPath;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.concurrent.Executors;
 
-public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implements ChatResponseListener {
+public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implements ChatResponseListener, PaymentConfirmationListener {
 
 
     private static final int SPEECH_REQUEST_CODE = 0;
 
     BottomSheetChatBinding binding;
     ChatBotAdapter chatBotAdapter;
+
+    BottomSheetChatBotFragment bottomSheetChatBotFragment;
 
     APIManager apiManager;
 
@@ -57,14 +70,32 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
 
     private AudioWaveView audioWaveView;
 
-    private boolean isListening = false;
+    private boolean isListening = true;
 
     private String sessionId;
     private UserDetails userDetails;
 
+    private UserSignUpData userSignUpData;
+
+    private Boolean isTempRoomObject = false;
+
+    private List<Rooms> roomsList;
+
+    private FirebaseFirestore db;
+
+    private String roomPreferenceMessage = "Great! You are all set to book a room. " +
+            "Do you have any request or anything specific you are looking for?";
+
     public BottomSheetChatBotFragment(String sessionId, UserDetails userDetails) {
         this.sessionId = sessionId;
         this.userDetails = userDetails;
+    }
+
+    public BottomSheetChatBotFragment(String sessionId, UserDetails userDetails, UserSignUpData userSignUpData) {
+        this.sessionId = sessionId;
+        this.userDetails = userDetails;
+        this.userSignUpData = userSignUpData;
+        this.bottomSheetChatBotFragment = this;
     }
 
     @Nullable
@@ -72,10 +103,12 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = BottomSheetChatBinding.inflate(inflater);
 
-        chatBotAdapter = new ChatBotAdapter(messagesList);
+        chatBotAdapter = new ChatBotAdapter(messagesList, userSignUpData);
         audioWaveView = binding.audioWaveView;
 
         apiManager = new APIManager("custom");
+        roomsList = new ArrayList<>();
+        db = FirebaseFirestore.getInstance();
 
         binding.recyclerViewChat.setAdapter(chatBotAdapter);
         binding.recyclerViewChat.addItemDecoration(new SpaceItemDecoration(16));
@@ -117,7 +150,10 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
                         @Override
                         public void onDone(String s) {
                             Log.d("TextToSpeech", "Done");
-                            mainHandler.post(() -> startSpeechRecognition());
+                            mainHandler.post(() ->
+                            {
+                                startSpeechRecognition();
+                            });
                         }
 
                         @Override
@@ -170,6 +206,7 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
             public void onClick(View v) {
                 audioWaveView.setSpeaking(false);
                 audioWaveView.stopAnimation();
+                isListening = false;
                 speechRecognizer.stopListening();
                 binding.chatListeningLayout.animate().alpha(0f).setDuration(300).withEndAction(() ->
                         binding.chatListeningLayout.setVisibility(View.GONE));
@@ -268,6 +305,19 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
         Log.d("ChatBotResponse", response);
         ChatMessage botMessage = new ChatMessage(response, true);
         botMessage.setIsRoomObject(response.contains("book_room") ? true : false);
+
+        if(botMessage.getIsRoomObject()){
+            isTempRoomObject = true;
+            botMessage.setIsRoomObject(false);
+            botMessage.setText(roomPreferenceMessage);
+        } else if (isTempRoomObject) {
+            isTempRoomObject = false;
+            getRoomRecommendation();
+
+            botMessage.setIsRoomObject(true);
+            Log.d("ChatBotRoom", "Notifying about room");
+            return;
+        }
         messagesList.add(botMessage);
         chatBotAdapter.notifyItemInserted(messagesList.size() - 1);
         binding.recyclerViewChat.scrollToPosition(messagesList.size() - 1);
@@ -275,8 +325,20 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
         if(!botMessage.getIsRoomObject()) {
             textToSpeech.speak(botMessage.getText().replaceAll("[\\p{So}\\p{Cn}]", ""), TextToSpeech.QUEUE_FLUSH, null, "bot");
         } else {
-            textToSpeech.speak("I have found a room for you. Do you want to book it?", TextToSpeech.QUEUE_FLUSH, null, "bot");
+            textToSpeech.speak("I have found a room for you as per your needs. Do you want to book it?", TextToSpeech.QUEUE_FLUSH, null, "bot");
         }
+    }
+
+    private void onRoomBookingChatBot() throws Exception{
+        ChatMessage botMessage = new ChatMessage("book_room", true);
+        botMessage.setIsRoomObject(true);
+
+        messagesList.add(botMessage);
+        chatBotAdapter.notifyItemInserted(messagesList.size() - 1);
+        binding.recyclerViewChat.scrollToPosition(messagesList.size() - 1);
+
+        textToSpeech.speak("I have found a room for you as per your needs. Do you want to book it?", TextToSpeech.QUEUE_FLUSH, null, "bot");
+
     }
 
     @Override
@@ -301,6 +363,26 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
             messagesList.remove(currentUserMessageIndex);
             chatBotAdapter.notifyItemRemoved(currentUserMessageIndex);
         }
+    }
+
+    @Override
+    public void onPaymentConfirmed() {
+
+        Log.d("Payment", "Payment Confirmed");
+
+        ChatMessage botMessage = new ChatMessage("Hurrah! Your booking is confirmed, we are thrilled to welcome you. " +
+                "In meanTime if you have any other query or requiring help with your booking, don't forget me to say hi ", true);
+
+        messagesList.add(botMessage);
+        chatBotAdapter.notifyItemInserted(messagesList.size() - 1);
+        binding.recyclerViewChat.scrollToPosition(messagesList.size() - 1);
+        textToSpeech.speak(botMessage.getText().replaceAll("[\\p{So}\\p{Cn}]", ""), TextToSpeech.QUEUE_FLUSH, null, "bot");
+
+    }
+
+    @Override
+    public void onPaymentFailed() {
+
     }
 
     private class CustomRecognitionListener implements RecognitionListener {
@@ -388,5 +470,103 @@ public class BottomSheetChatBotFragment extends BottomSheetDialogFragment implem
             ActivityCompat.requestPermissions(getActivity(),
                     new String[]{Manifest.permission.RECORD_AUDIO}, 1);
         }
+    }
+
+    private void getRoomRecommendation() {
+
+        RecommendationRequest recommendationRequest = new RecommendationRequest(userSignUpData,
+                "rooms");
+
+        try {
+            apiManager.getRecommendation(recommendationRequest, new RecommendationListener() {
+                @Override
+                public void onRecommendationSuccess(List<String> response) {
+
+                    Log.d("HomeActivity", "Room Recommendation Success: " + response.toString());
+
+                    //Get the list of rooms from Firebase Firestore Database using the list of roomIds received from API
+
+                    db.collection("rooms")
+                            .whereIn(FieldPath.documentId(), response)
+                            .get()
+                            .addOnSuccessListener(queryDocumentSnapshots -> {
+                                if (!queryDocumentSnapshots.isEmpty()) {
+                                    // Iterate through the documents and process each user document
+                                    List<Rooms> tempList = new ArrayList<>();
+                                    for (DocumentSnapshot document : queryDocumentSnapshots.getDocuments()) {
+                                        Rooms room = document.toObject(Rooms.class);
+                                        Map<String, Object> roomData = document.getData();
+                                        Log.d("Firestore", "Room ID: " + document.getId() + " Data: " + roomData);
+                                        tempList.add(room);
+                                    }
+
+                                    roomsList.clear();
+                                    roomsList.addAll(tempList);
+                                    RoomAdapter roomAdapter = new RoomAdapter(roomsList, true, bottomSheetChatBotFragment);
+                                    Log.d("ChatBotRoom", "Setting Room Adapter");
+                                    chatBotAdapter.setRoomAdapterObj(roomAdapter);
+
+                                    try {
+                                        onRoomBookingChatBot();
+                                    } catch (Exception e) {
+                                        throw new RuntimeException(e);
+                                    }
+
+
+                                } else {
+                                    Log.d("Firestore", "[Room ]No matching documents found.");
+                                }
+                            })
+                            .addOnFailureListener(e -> {
+                                        Log.w("Firestore", "[Room ]Error retrieving documents", e);
+
+                                    }
+                            );
+
+                }
+
+                @Override
+                public void onRecommendationFailure(String response) {
+                    Log.d("HomeActivity", "[Room ]Recommendation Failure: " + response);
+                    Executors.newSingleThreadExecutor().execute(() -> {
+                        db.collection("rooms")
+                                .get()
+                                .addOnSuccessListener(queryDocumentSnapshots -> {
+                                    Log.d("HomeActivity", "Rooms data loaded successfully QueryDocumentSnapshots: " +
+                                            queryDocumentSnapshots.size());
+                                    List<Rooms> tempList = new ArrayList<>(); // Temporary list to avoid main thread blocking
+                                    for (DocumentSnapshot document : queryDocumentSnapshots) {
+                                        Rooms room = document.toObject(Rooms.class);
+                                        Log.d("HomeActivity", "Room: " + room.toString());
+                                        tempList.add(room);
+                                    }
+                                    // Update RecyclerView on the main thread
+                                    roomsList.clear();
+                                    roomsList.addAll(tempList);
+
+                                    RoomAdapter roomAdapter = new RoomAdapter(roomsList, true);
+                                    chatBotAdapter.setRoomAdapterObj(roomAdapter);
+
+                                    try {
+                                        onRoomBookingChatBot();
+                                    } catch (Exception e) {
+                                        throw new RuntimeException(e);
+                                    }
+
+                                })
+                                .addOnFailureListener(e -> {
+                                    // Handle any errors
+                                    Log.d("HomeActivity", "Failed to load SharedSpace data: " + e.getMessage());
+                                });
+
+                    });
+
+                }
+            });
+        } catch (Exception ex) {
+            Log.d("HomeActivity", "[Room ]Recommendation Exception: " + ex.getMessage());
+
+        }
+
     }
 }

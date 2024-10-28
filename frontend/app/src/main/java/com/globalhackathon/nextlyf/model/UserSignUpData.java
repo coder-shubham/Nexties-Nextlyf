@@ -1,11 +1,13 @@
 package com.globalhackathon.nextlyf.model;
 
+import com.google.firebase.firestore.PropertyName;
+
 public class UserSignUpData {
 
     private String userId;
     private String name;
     private String email;
-    private String mobile;
+    private Object mobile;
     private String dob;
     private String country;
     private String city;
@@ -16,15 +18,21 @@ public class UserSignUpData {
     private String profession;
     private String fieldsOfInterest;
     private String hobbies;
+    private String propertyLocation;
+    private String userMainInterestHighlight;
 
+    @PropertyName("profile_pic")
+    private String profilePic;
 
     public UserSignUpData() {
     }
 
-    public UserSignUpData(String name, String email, String mobile, String dob,
+    public UserSignUpData(String userId, String name, String email, String mobile, String dob,
                           String country, String city, String gender, String language,
-                          String referralCode, String profession,
-                          String interests, String hobbies) {
+                          String referralCode, String profession, String fieldsOfInterest,
+                          String hobbies, String propertyLocation, String userMainInterestHighlight,
+                          String profilePic) {
+        this.userId = userId;
         this.name = name;
         this.email = email;
         this.mobile = mobile;
@@ -35,8 +43,11 @@ public class UserSignUpData {
         this.language = language;
         this.referralCode = referralCode;
         this.profession = profession;
-        this.fieldsOfInterest = interests;
+        this.fieldsOfInterest = fieldsOfInterest;
         this.hobbies = hobbies;
+        this.propertyLocation = propertyLocation;
+        this.userMainInterestHighlight = userMainInterestHighlight;
+        this.profilePic = profilePic;
     }
 
     public String getUserId() {
@@ -55,7 +66,10 @@ public class UserSignUpData {
         return email;
     }
 
-    public String getMobile() {
+
+
+    @PropertyName("mobile")
+    public Object getMobile() {
         return mobile;
     }
 
@@ -103,8 +117,21 @@ public class UserSignUpData {
         this.email = email;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setMobile(Object mobile) {
+
+        if (mobile instanceof Long) {
+            this.mobile = mobile;
+        } else if (mobile instanceof String) {
+            // Attempt to parse the string as a Long, if possible
+            try {
+                this.mobile = Long.parseLong((String) mobile);
+            } catch (NumberFormatException e) {
+                this.mobile = mobile; // Keep as String if parsing fails
+            }
+        } else {
+            this.mobile = mobile; // Assign as is for other types
+        }
+
     }
 
     public void setDob(String dob) {
@@ -141,5 +168,32 @@ public class UserSignUpData {
 
     public void setHobbies(String hobbies) {
         this.hobbies = hobbies;
+    }
+
+    public String getPropertyLocation() {
+        return propertyLocation;
+    }
+
+    public void setPropertyLocation(String propertyLocation) {
+        this.propertyLocation = propertyLocation;
+    }
+
+    public String getUserMainInterestHighlight() {
+        return userMainInterestHighlight;
+    }
+
+    public void setUserMainInterestHighlight(String userMainInterestHighlight) {
+        this.userMainInterestHighlight = userMainInterestHighlight;
+    }
+
+    @PropertyName("profile_pic")
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+
+    @PropertyName("profile_pic")
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
     }
 }

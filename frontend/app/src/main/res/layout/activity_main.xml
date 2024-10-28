@@ -13,7 +13,7 @@
         android:fontFamily="@font/kalam_bold"
         android:padding="10dp"
         android:rotation="-8"
-        android:text="NextLyf"
+        android:text="Nextlyf"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="54sp"
         android:layout_marginTop="60dp"

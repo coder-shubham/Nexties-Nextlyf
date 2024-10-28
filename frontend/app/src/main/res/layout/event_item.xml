@@ -27,7 +27,7 @@
                 android:layout_height="100dp"
                 android:alpha="0.5"
                 android:scaleType="fitXY"
-                android:src="@drawable/lyf_event" />
+                android:src="@drawable/badminton" />
 
             <!-- Room Details -->
             <TextView
@@ -88,7 +88,7 @@
                 android:drawablePadding="1dp"
                 android:drawableTint="@color/white"
                 android:padding="4dp"
-                android:text="Technology"
+                android:text="Sports"
                 android:textColor="@color/white"
                 android:textSize="6sp"
                 android:textStyle="bold" />
@@ -118,7 +118,7 @@
                     android:id="@+id/roomName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Halloween 2024"
+                    android:text="lyf Badminton Tournament"
                     android:textColor="#000000"
                     android:fontFamily="@font/quicksand_medium"
                     android:textSize="12sp"
@@ -129,7 +129,7 @@
                     android:id="@+id/roomAmenitiesFirst"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tech \u2022 AI \u2022 Web3"
+                    android:text="Sports \u2022 Badminton \u2022 Fitness"
                     android:textColor="#000000"
                     android:fontFamily="@font/quicksand_medium"
                     android:textSize="9sp"
@@ -139,9 +139,9 @@
 
                 <TextView
                     android:id="@+id/roomSize"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="70 Mutuals 50000 Attendees"
+                    android:text="50000 Attendees"
                     android:drawableStart="@drawable/baseline_person_10"
                     android:fontFamily="@font/quicksand_medium"
                     android:textSize="7sp"
@@ -201,7 +201,7 @@
                     android:id="@+id/roomAmenitiesFirst2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="28th Oct 24"
+                    android:text="2nd Nov 24"
                     android:textColor="#000000"
                     android:fontFamily="@font/quicksand_medium"
                     android:textSize="8sp"
@@ -257,7 +257,7 @@
                         android:id="@+id/roomPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$7000"
+                        android:text="Free"
                         android:textColor="#000000"
                         android:fontFamily="@font/quicksand_medium"
                         android:textSize="12sp"

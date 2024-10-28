@@ -7,6 +7,8 @@ import com.globalhackathon.nextlyf.listeners.OTPResponseListener;
 import com.globalhackathon.nextlyf.listeners.RecommendationListener;
 import com.globalhackathon.nextlyf.model.ChatRequest;
 import com.globalhackathon.nextlyf.model.ChatResponse;
+import com.globalhackathon.nextlyf.model.GroupChatMessage;
+import com.globalhackathon.nextlyf.model.GroupMessageListener;
 import com.globalhackathon.nextlyf.model.OTPResponse;
 import com.globalhackathon.nextlyf.model.RecommendationRequest;
 import com.globalhackathon.nextlyf.model.RecommendationResponse;
@@ -35,8 +37,8 @@ public class APIManager {
     private static Map<String, APIServiceInterface> retrofitMap = new HashMap();
 
     Gson gson;
-    public static final String BACKEND_BASE_URL = "http://10.39.31.164:8080";
-    public static final String ML_BASE_URL = "http://192.168.0.100:5000";
+    public static final String BACKEND_BASE_URL = "http://172.16.36.231:8080";
+    public static final String ML_BASE_URL = "http://172.16.33.165:5000";
 
     private static Map<String, String> urlMap = new HashMap();
 
@@ -157,6 +159,29 @@ public class APIManager {
 
 
 
+    }
+
+    public void getGroupMessage(GroupMessageListener groupMessageListener) {
+        Call<GroupChatMessage> call = apiServiceInterface.getGroupMessage();
+        call.enqueue(new Callback<GroupChatMessage>() {
+            @Override
+            public void onResponse(Call<GroupChatMessage> call, Response<GroupChatMessage> response) {
+                if (response.isSuccessful()) {
+                    GroupChatMessage groupChatMessage = response.body();
+                    Log.i("Group Message API Response", "Success");
+                    groupMessageListener.onGroupMessageReceived(groupChatMessage);
+                } else {
+                    Log.i("Group Message API Response", "Failed");
+                    groupMessageListener.onGroupMessageError(null);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GroupChatMessage> call, Throwable t) {
+                Log.i("Group Message API Response", "Failed " + t.getMessage());
+                groupMessageListener.onGroupMessageError(null);
+            }
+        });
     }
 
 

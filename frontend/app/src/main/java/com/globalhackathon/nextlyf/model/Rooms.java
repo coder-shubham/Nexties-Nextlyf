@@ -1,73 +1,105 @@
 package com.globalhackathon.nextlyf.model;
 
-import com.google.gson.annotations.SerializedName;
+import com.google.firebase.firestore.PropertyName;
 
 public class Rooms {
-        @SerializedName("AC")
+        @PropertyName("AC")
         private String ac;
 
-        @SerializedName("AmenitiesIncluded")
+        @PropertyName("AmenitiesIncluded")
         private String amenitiesIncluded;
 
-        @SerializedName("Area")
+        @PropertyName("Area")
         private int area;
 
-        @SerializedName("Balcony")
+        @PropertyName("Balcony")
         private String balcony;
 
-        @SerializedName("Bathroom")
+        @PropertyName("Bathroom")
         private String bathroom;
 
-        @SerializedName("Bed Type")
+        @PropertyName("Bed Type")
         private String bedType;
 
-        @SerializedName("Category")
+        @PropertyName("Category")
         private String category;
 
-        @SerializedName("Color")
+        @PropertyName("Color")
         private String color;
 
-        @SerializedName("Description")
+        @PropertyName("Description")
         private String description;
 
-        @SerializedName("Floor No.")
+        @PropertyName("Floor No.")
         private int floorNo;
 
-        @SerializedName("Fridge")
+        @PropertyName("Fridge")
         private String fridge;
 
-        @SerializedName("Name")
+        @PropertyName("Name")
         private String name;
 
-        @SerializedName("No. of Beds")
+        @PropertyName("No. of Beds")
         private int noOfBeds;
 
-        @SerializedName("Price")
+        @PropertyName("Price")
         private double price;
 
-        @SerializedName("PropertyLocation")
+        @PropertyName("PropertyLocation")
         private String propertyLocation;
 
-        @SerializedName("Rating/PopularityPercentage")
+        @PropertyName("Rating/PopularityPercentage")
         private int ratingPopularityPercentage;
 
-        @SerializedName("Status")
+        @PropertyName("Status")
         private String status;
 
-        @SerializedName("TV")
+        @PropertyName("TV")
         private String tv;
 
-        @SerializedName("Tags")
+        @PropertyName("Tags")
         private String tags;
 
-        @SerializedName("Type")
+        @PropertyName("Type")
         private String type;
 
-        @SerializedName("Wifi")
+        @PropertyName("Wifi")
         private String wifi;
 
-        @SerializedName("image")
+        @PropertyName("image")
         private String image;
+
+        @PropertyName("property")
+        private String property;
+
+        public Rooms() {
+        }
+
+        public Rooms(String ac, String amenitiesIncluded, int area, String balcony, String bathroom, String bedType, String category, String color, String description, int floorNo, String fridge, String name, int noOfBeds, double price, String propertyLocation, int ratingPopularityPercentage, String status, String tv, String tags, String type, String wifi, String image, String property) {
+            this.ac = ac;
+            this.amenitiesIncluded = amenitiesIncluded;
+            this.area = area;
+            this.balcony = balcony;
+            this.bathroom = bathroom;
+            this.bedType = bedType;
+            this.category = category;
+            this.color = color;
+            this.description = description;
+            this.floorNo = floorNo;
+            this.fridge = fridge;
+            this.name = name;
+            this.noOfBeds = noOfBeds;
+            this.price = price;
+            this.propertyLocation = propertyLocation;
+            this.ratingPopularityPercentage = ratingPopularityPercentage;
+            this.status = status;
+            this.tv = tv;
+            this.tags = tags;
+            this.type = type;
+            this.wifi = wifi;
+            this.image = image;
+            this.property = property;
+        }
 
         // Getters and Setters
 
@@ -245,6 +277,14 @@ public class Rooms {
 
         public void setImage(String image) {
             this.image = image;
+        }
+
+        public String getProperty() {
+            return property;
+        }
+
+        public void setProperty(String property) {
+            this.property = property;
         }
 
 }
