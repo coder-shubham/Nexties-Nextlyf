@@ -6,23 +6,29 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.globalhackathon.nextlyf.databinding.ActivityLoginBinding;
+import com.globalhackathon.nextlyf.model.UserSignUpData;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.gson.Gson;
 
 public class LoginActivity extends AppCompatActivity {
 
 
     ActivityLoginBinding loginBinding;
     private FirebaseAuth mAuth;
-    private FirebaseDatabase database;
+    private FirebaseFirestore db;
+
+    Gson gson;
     private FirebaseUser currentUser;
 
     @Override
@@ -34,13 +40,14 @@ public class LoginActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance();
+        db = FirebaseFirestore.getInstance();
         currentUser = mAuth.getCurrentUser();
+        gson = new Gson();
 
         loginBinding.loginLayout.setVisibility(View.GONE);
 
         loginBinding.loginCheckProgressBar.setIndeterminate(true);
-        loginBinding.loginCheckProgressBar.setVisibility(View.GONE);
+        loginBinding.loginCheckProgressBar.setVisibility(View.VISIBLE);
 
         loginBinding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,14 +103,35 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        loginBinding.loginLayout.setVisibility(View.GONE);
+
         currentUser = mAuth.getCurrentUser();
 
         if (currentUser != null) {
+            loginBinding.loginLayout.setVisibility(View.GONE);
             Toast.makeText(this, "User already logged in", Toast.LENGTH_SHORT).show();
-//            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-//            finish();
+            db.collection("users").document(currentUser.getUid()).get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    if (task.getResult().exists()) {
+                        Log.d("LoginActivity", "User data found as: " + task.getResult().toString());
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        intent.putExtra("userSignUpData", gson.toJson(task.getResult().toObject(UserSignUpData.class)));
+                        intent.putExtra("isFromSignUp", false);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Log.d("LoginActivity", "User data not found");
+                        loginBinding.loginLayout.setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    Log.d("LoginActivity", "Error getting user data: ", task.getException());
+                    loginBinding.loginLayout.setVisibility(View.VISIBLE);
+                }
+            });
+
         } else {
             loginBinding.loginLayout.setVisibility(View.VISIBLE);
+            loginBinding.loginCheckProgressBar.setVisibility(View.GONE);
         }
     }
 

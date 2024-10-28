@@ -42,10 +42,15 @@ public class OnboardingScreen extends AppCompatActivity {
 
         // Initialize onboarding slides
         onboardingItems = Arrays.asList(
-                new OnboardingItem(R.drawable.onboarding_connect_new, "Text and Image Here 1"),
-                new OnboardingItem(R.drawable.onboarding_connect_new, "Text and Image Here 2"),
-                new OnboardingItem(R.drawable.nextlyf_mainlogo, "Text and Image Here 3"),
-                new OnboardingItem(R.drawable.nextlyf_mainlogo, "Text and Image Here 4")
+                new OnboardingItem(R.drawable.onboarding_connect_new,
+                        "Personalized Living, Just for You",
+                        "Discover recommendations that align perfectly with your lifestyle and preferences."),
+                new OnboardingItem(R.drawable.onboarding_chatbot, "Your Personal Assistant, Anytime, Anywhere",
+                        "Meet our AI chatbot, designed to provide instant answers and insights tailored to your needs."),
+                new OnboardingItem(R.drawable.onboarding_community, "Connect, Share, Thrive",
+                        "Forge friendships and foster a vibrant community with like-minded individuals."),
+                new OnboardingItem(R.drawable.onboarding_loyalty, "Rewards, Just for You",
+                        "Earn loyalty points and rewards for every activity you perform on the platform.")
         );
 
         onboardingAdapter = new OnboardingAdapter(onboardingItems);
@@ -144,7 +149,7 @@ public class OnboardingScreen extends AppCompatActivity {
 
     private void goToLogin() {
 //        Toast.makeText(this, "Go to login", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(OnboardingScreen.this, SignUpActivity.class);
+        Intent intent = new Intent(OnboardingScreen.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

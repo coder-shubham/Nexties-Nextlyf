@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="10dp"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_gravity="center">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Room Image -->
+            <ImageView
+                android:id="@+id/roomImage"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:src="@drawable/shared_space" />
+
+            <!-- Room Details -->
+            <TextView
+                android:id="@+id/roomLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/roomImage"
+                android:layout_alignEnd="@+id/roomImage"
+                android:background="#9EDAEAF6"
+                android:drawableStart="@drawable/baseline_location_on_24"
+                android:drawablePadding="1dp"
+                android:drawableTint="@color/black"
+                android:padding="4dp"
+                android:text="Lyf Funan, Singapore"
+                android:textColor="@color/black"
+                android:textSize="6sp"
+                android:textStyle="bold" />
+
+            <!-- Room Rating -->
+
+            <!--            <androidx.appcompat.widget.AppCompatRatingBar-->
+            <!--                android:id="@+id/roomRating"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:stepSize="1"-->
+            <!--                android:numStars="5"-->
+            <!--                android:rating="3"-->
+            <!--                android:isIndicator="true"-->
+            <!--                android:scaleX=".6"-->
+            <!--                android:scaleY=".6"-->
+            <!--                android:progressTint="#FFD700"-->
+            <!--                style="?android:attr/ratingBarStyleSmall"-->
+            <!--                android:layout_alignEnd="@+id/roomImage"-->
+            <!--                android:layout_alignBottom="@+id/roomImage" />-->
+
+            <!--            <com.google.android.material.textview.MaterialTextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_above="@+id/roomRating"-->
+            <!--                android:layout_alignStart="@+id/roomRating"-->
+            <!--                android:layout_alignEnd="@+id/roomImage"-->
+            <!--                android:fontFamily="@font/quicksand_medium"-->
+            <!--                android:padding="2dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="3.0"-->
+            <!--                android:textColor="#000000"-->
+            <!--                android:textSize="10sp" />-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/roomOffer"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignEnd="@+id/roomImage"-->
+<!--                android:layout_alignBottom="@+id/roomImage"-->
+<!--                android:background="#EDCF080F"-->
+<!--                android:drawableStart="@drawable/globe_1_svgrepo_com"-->
+<!--                android:drawablePadding="1dp"-->
+<!--                android:drawableTint="@color/white"-->
+<!--                android:padding="4dp"-->
+<!--                android:text="Technology"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="6sp"-->
+<!--                android:textStyle="bold" />-->
+
+        </RelativeLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
+
+                <!-- Room Name -->
+                <TextView
+                    android:id="@+id/roomName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Connect"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="12sp"
+                    android:paddingTop="2dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/roomAmenitiesFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Co-working \u2022 Modern \u2022 Share"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="9sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/roomSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max 80 Pax"
+                    android:drawableStart="@drawable/baseline_person_10"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="7sp"
+                    android:drawablePadding="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="6dp" />
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="3"-->
+                <!--                    android:gravity="bottom"-->
+                <!--                    android:orientation="vertical">-->
+
+
+
+                <!--                </LinearLayout>-->
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/roomPriceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="2dp"
+                android:paddingTop="6dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+
+
+
+
+
+                <!-- Room amenities in bullet points-->
+
+
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/roomAmenitiesSecond"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="\u2022 Sea View"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:textColor="#000000"-->
+                <!--                    android:fontFamily="@font/quicksand_medium"-->
+                <!--                    android:textSize="8sp" />-->
+
+
+                <TextView
+                    android:id="@+id/roomAmenitiesFirst2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="200 sq m"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:textSize="8sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="2dp"
+                    />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/roomPriceStartText"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Starting From"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:fontFamily="@font/quicksand_medium"-->
+<!--                    android:textSize="5sp"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    />-->
+
+
+                <!--                <androidx.appcompat.widget.AppCompatRatingBar-->
+                <!--                    android:id="@+id/roomRating"-->
+                <!--                    style="?android:attr/ratingBarStyleSmall"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:isIndicator="true"-->
+                <!--                    android:numStars="5"-->
+                <!--                    android:progressTint="#FF9800"-->
+                <!--                    android:rating="3"-->
+                <!--                    android:scaleX=".6"-->
+                <!--                    android:scaleY=".6"-->
+                <!--                    android:stepSize="1" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/roomAmenitiesSecond"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="(7000 reviews)"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:textColor="#000000"-->
+                <!--                    android:fontFamily="@font/quicksand_medium"-->
+                <!--                    android:textSize="6sp" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/roomAmenitiesThird"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="\u2022 Light Color"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:textColor="#000000"-->
+                <!--                    android:fontFamily="@font/quicksand_medium"-->
+                <!--                    android:textSize="8sp" />-->
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center">
+                    <!-- Room Price -->
+                    <TextView
+                        android:id="@+id/roomPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$7000"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textSize="12sp"
+                        android:paddingTop="4dp"
+                        android:layout_marginLeft="1dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/roomOriginalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:paddingLeft="3dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/strikePrice"
+                        android:textColor="#000000"
+                        android:visibility="gone"
+                        android:textSize="6sp" />
+
+                    <TextView
+                        android:id="@+id/roomPricePerX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:paddingLeft="1dp"
+                        android:layout_marginTop="4dp"
+                        android:text="/Hour"
+                        android:textColor="#000000"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

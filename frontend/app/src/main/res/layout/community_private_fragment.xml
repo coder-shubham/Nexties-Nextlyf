@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--Implement Carousel-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highlights"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/quicksand_medium"
+        />
+
+    <com.globalhackathon.nextlyf.utils.CustomRecyclerView
+        android:id="@+id/userHighlightRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"
+        android:orientation="horizontal"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Connections"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/quicksand_medium"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userChatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        />
+
+
+
+
+</LinearLayout>

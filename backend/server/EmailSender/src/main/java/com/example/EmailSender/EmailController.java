@@ -1,9 +1,11 @@
 package com.example.EmailSender;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+import org.apache.solr.client.solrj.SolrServerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -13,12 +15,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import com.example.EmailSender.service.SolrService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
 
 @RestController
 public class EmailController {
 	
 	@Autowired
 	private JavaMailSender mailSender;
+	
+	 @Autowired
+	    private SolrService solrService;
 	
 	public EmailController(JavaMailSender mailSender) {
 		super();
@@ -31,6 +41,16 @@ public class EmailController {
 	private int generateRandomNumber() {
         Random random = new Random();
         return 10000 + random.nextInt(90000); // Generate a number between 10000 and 99999
+    }
+	
+//	@GetMapping("/api/search")
+//    public List<?> searchSolr(@RequestParam String searchText) throws IOException, SolrServerException {
+//        // Call service to search Solr
+//        return solrService.searchSolr(searchText);
+//    }
+	@GetMapping("/api/search")  
+    public Object searchSolr(@RequestParam String searchText) throws IOException, SolrServerException {
+        return solrService.searchSolr(searchText);
     }
 
 	@PostMapping("/otp")

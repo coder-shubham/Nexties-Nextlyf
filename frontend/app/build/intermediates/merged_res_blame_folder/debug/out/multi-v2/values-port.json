@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.globalhackathon.nextlyf.app-mergeDebugResources-53:/values-port/values-port.xml",
+            "outputFile": "com.globalhackathon.nextlyf.app-mergeDebugResources-54:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/Users/shubhamsarraf/.gradle/caches/transforms-3/919d74db96d5a00e753560e764878e30/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
+                    "source": "/Users/shubhamsarraf/.gradle/caches/8.9/transforms/427c853c411aec796158e1414a1e304b/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

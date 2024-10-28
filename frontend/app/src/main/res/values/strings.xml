@@ -5,4 +5,157 @@
         <item>Item 2</item>
         <item>Item 3</item>
     </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-binary</item>
+        <item>Prefer not to say</item>
+    </string-array>
+
+    <!-- Country List -->
+    <string-array name="country_list">
+        <item>United States</item>
+        <item>Canada</item>
+        <item>United Kingdom</item>
+        <item>Australia</item>
+        <item>India</item>
+        <item>Germany</item>
+        <item>France</item>
+        <item>China</item>
+        <item>Japan</item>
+        <item>Singapore</item> <!-- Added Singapore -->
+        <item>South Africa</item>
+    </string-array>
+
+    <!-- City List for United States -->
+    <string-array name="us_city_list">
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+        <item>Houston</item>
+        <item>Phoenix</item>
+    </string-array>
+
+    <!-- City List for Canada -->
+    <string-array name="canada_city_list">
+        <item>Toronto</item>
+        <item>Vancouver</item>
+        <item>Montreal</item>
+        <item>Calgary</item>
+        <item>Ottawa</item>
+    </string-array>
+
+    <!-- City List for United Kingdom -->
+    <string-array name="uk_city_list">
+        <item>London</item>
+        <item>Manchester</item>
+        <item>Birmingham</item>
+        <item>Glasgow</item>
+        <item>Liverpool</item>
+    </string-array>
+
+    <!-- City List for Australia -->
+    <string-array name="australia_city_list">
+        <item>Sydney</item>
+        <item>Melbourne</item>
+        <item>Brisbane</item>
+        <item>Perth</item>
+        <item>Adelaide</item>
+    </string-array>
+
+    <!-- City List for India -->
+    <string-array name="india_city_list">
+        <item>Mumbai</item>
+        <item>Delhi</item>
+        <item>Bangalore</item>
+        <item>Hyderabad</item>
+        <item>Chennai</item>
+    </string-array>
+
+    <!-- City List for China -->
+    <string-array name="china_city_list">
+        <item>Beijing</item>
+        <item>Shanghai</item>
+        <item>Shenzhen</item>
+        <item>Guangzhou</item>
+        <item>Chengdu</item>
+    </string-array>
+
+    <!-- City List for Singapore -->
+    <string-array name="singapore_city_list">
+        <item>Singapore</item> <!-- Singapore is a city-state -->
+    </string-array>
+
+    <string-array name="france_city_list">
+        <item>Paris</item>
+        <item>Marseille</item>
+        <item>Lyon</item>
+        <item>Toulouse</item>
+        <item>Nice</item>
+        <item>Nantes</item>
+        <item>Strasbourg</item>
+        <item>Montpellier</item>
+        <item>Bordeaux</item>
+        <item>Lille</item>
+    </string-array>
+
+    <string-array name="germany_city_list">
+        <item>Berlin</item>
+        <item>Hamburg</item>
+        <item>Munich</item>
+        <item>Cologne</item>
+        <item>Frankfurt</item>
+        <item>Stuttgart</item>
+        <item>Düsseldorf</item>
+        <item>Dortmund</item>
+        <item>Essen</item>
+        <item>Leipzig</item>
+    </string-array>
+
+    <string-array name="japan_city_list">
+        <item>Tokyo</item>
+        <item>Osaka</item>
+        <item>Yokohama</item>
+        <item>Nagoya</item>
+        <item>Sapporo</item>
+        <item>Kobe</item>
+        <item>Kyoto</item>
+        <item>Fukuoka</item>
+        <item>Kawasaki</item>
+        <item>Saitama</item>
+    </string-array>
+
+    <string-array name="south_korea_city_list">
+        <item>Seoul</item>
+        <item>Busan</item>
+        <item>Incheon</item>
+        <item>Daegu</item>
+        <item>Daejeon</item>
+        <item>Gwangju</item>
+        <item>Suwon</item>
+        <item>Ulsan</item>
+        <item>Changwon</item>
+        <item>Seongnam</item>
+    </string-array>
+
+
+    <!-- Language List -->
+    <string-array name="language_list">
+        <item>English</item>
+        <item>Mandarin Chinese</item> <!-- Widely spoken in China and Singapore -->
+        <item>Malay</item> <!-- Common in Singapore and Malaysia -->
+        <item>Spanish</item>
+        <item>Hindi</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Arabic</item>
+        <item>Tamil</item> <!-- One of the official languages of Singapore -->
+    </string-array>
+
+    <string name="strikePrice"> <strike>8000</strike> </string>
 </resources>

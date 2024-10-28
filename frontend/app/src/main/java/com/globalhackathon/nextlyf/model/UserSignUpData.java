@@ -1,9 +1,8 @@
 package com.globalhackathon.nextlyf.model;
 
-import java.util.List;
-
 public class UserSignUpData {
 
+    private String userId;
     private String name;
     private String email;
     private String mobile;
@@ -15,8 +14,8 @@ public class UserSignUpData {
     private String referralCode;
 
     private String profession;
-    private List<String> interests;
-    private List<String> hobbies;
+    private String fieldsOfInterest;
+    private String hobbies;
 
 
     public UserSignUpData() {
@@ -25,7 +24,7 @@ public class UserSignUpData {
     public UserSignUpData(String name, String email, String mobile, String dob,
                           String country, String city, String gender, String language,
                           String referralCode, String profession,
-                          List<String> interests, List<String> hobbies) {
+                          String interests, String hobbies) {
         this.name = name;
         this.email = email;
         this.mobile = mobile;
@@ -36,8 +35,16 @@ public class UserSignUpData {
         this.language = language;
         this.referralCode = referralCode;
         this.profession = profession;
-        this.interests = interests;
+        this.fieldsOfInterest = interests;
         this.hobbies = hobbies;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {
@@ -80,11 +87,11 @@ public class UserSignUpData {
         return profession;
     }
 
-    public List<String> getInterests() {
-        return interests;
+    public String getFieldsOfInterest() {
+        return fieldsOfInterest;
     }
 
-    public List<String> getHobbies() {
+    public String getHobbies() {
         return hobbies;
     }
 
@@ -128,11 +135,11 @@ public class UserSignUpData {
         this.profession = profession;
     }
 
-    public void setInterests(List<String> interests) {
-        this.interests = interests;
+    public void setFieldsOfInterest(String fieldsOfInterest) {
+        this.fieldsOfInterest = fieldsOfInterest;
     }
 
-    public void setHobbies(List<String> hobbies) {
+    public void setHobbies(String hobbies) {
         this.hobbies = hobbies;
     }
 }

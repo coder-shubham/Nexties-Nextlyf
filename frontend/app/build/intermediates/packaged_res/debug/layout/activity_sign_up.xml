@@ -1,435 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:orientation="vertical">
+    tools:context=".SignUpActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/quicksand_medium"
-        android:text="Which fields are you \nmost interested in?"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select up to 5 fields"
-        android:textSize="15sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="@font/quicksand_medium"/>
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
+    <FrameLayout
+        android:id="@+id/otpFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="false"
-        android:orientation="horizontal"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        app:chipSpacingHorizontal="5dp"
-        app:chipSpacingVertical="5dp">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_technology"
-            android:layout_width="wrap_content"
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainRegisterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <!-- res/layout/activity_main.xml -->
+        <RelativeLayout
+            android:id="@+id/registerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:visibility="visible">
+
+            <!-- Top Shape -->
+            <ImageView
+                android:id="@+id/top_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_bottom_shape" />
+
+            <!-- Bottom Shape -->
+            <ImageView
+                android:id="@+id/bottom_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_top_shape" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/singUpLinearLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Technology"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mainRegisterLayout">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_healthcare"
-            android:layout_width="wrap_content"
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="Register"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- TextInputLayout for email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerEmailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:hint="Email"
+                android:padding="10dp"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:startIconDrawable="@drawable/ic_baseline_people_alt_24"
+                app:startIconTint="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerEmailText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E9F2FF"
+                    android:backgroundTintMode="add"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerPasswordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:hint="Password"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:singleLine="true"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorPrimaryDark"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                app:startIconTint="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registerPassText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E9F2FF"
+                    android:backgroundTintMode="add"
+                    android:ellipsize="end"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Healthcare"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_education"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Education"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_creative_arts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Creative Arts"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_science"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Science"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_engineering"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Engineering"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_finance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Finance"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_environment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Environment"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:padding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singUpLinearLayout">
 
 
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/registerProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:padding="6dp"
+                app:indicatorSize="100dp">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_marketing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Marketing"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
+            </com.google.android.material.progressindicator.CircularProgressIndicator>
+            <!-- Circular Button with Arrow -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignStart="@+id/registerProgressBar"
+                android:layout_alignTop="@+id/registerProgressBar"
+                android:layout_alignEnd="@+id/registerProgressBar"
+                android:layout_alignBottom="@+id/registerProgressBar"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/baseline_arrow_circle_right_24"
+                android:padding="10dp" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_social_impact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Social Impact"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
+            <!--        android:layout_marginLeft="13dp"-->
+            <!--        android:layout_marginTop="12dp"-->
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_gaming"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Gaming"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
+        </RelativeLayout>
 
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_travel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Travel &amp; Tourism"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_fitness"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Fitness &amp; Wellness"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_media"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Media &amp; Journalism"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_food"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Food &amp; Culinary"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_business"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Business"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_fashion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Fashion &amp; Design"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_sports"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Sports &amp; Recreation"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_real_estate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Real Estate"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip_cryptocurrency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.Chip.Filter"
-            android:text="Cryptocurrency"
-            app:chipBackgroundColor="@color/chip_bg"
-            android:clickable="true"
-            android:checkable="true" />
-
-        <!-- Add more chips as needed -->
-
-    </com.google.android.material.chip.ChipGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--    android:layout_width="match_parent"-->
-    <!--    android:layout_height="match_parent"-->
-    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--    xmlns:tools="http://schemas.android.com/tools"-->
-    <!--    tools:context=".SignUpActivity">-->
-
-    <!--    <FrameLayout-->
-    <!--        android:id="@+id/otpFrameLayout"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent">-->
-
-    <!--    </FrameLayout>-->
-
-    <!--    &lt;!&ndash; res/layout/activity_main.xml &ndash;&gt;-->
-    <!--    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:background="#FFFFFF">-->
-
-    <!--        &lt;!&ndash; Top Shape &ndash;&gt;-->
-    <!--        <ImageView-->
-    <!--            android:id="@+id/top_shape"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_alignParentTop="true"-->
-    <!--            android:src="@drawable/bg_bottom_shape"-->
-    <!--            android:scaleType="fitXY"-->
-    <!--            android:layout_alignParentStart="true"-->
-    <!--            android:layout_alignParentEnd="true"/>-->
-
-    <!--        &lt;!&ndash; Bottom Shape &ndash;&gt;-->
-    <!--        <ImageView-->
-    <!--            android:id="@+id/bottom_shape"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_alignParentBottom="true"-->
-    <!--            android:src="@drawable/bg_top_shape"-->
-    <!--            android:scaleType="fitXY"-->
-    <!--            android:layout_alignParentStart="true"-->
-    <!--            android:layout_alignParentEnd="true"/>-->
-
-    <!--    </RelativeLayout>-->
-
-    <!--    <LinearLayout-->
-    <!--        android:id="@+id/singUpLinearLayout"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:gravity="center"-->
-    <!--        android:orientation="vertical"-->
-    <!--        android:layout_marginBottom="30dp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="@+id/otpFrameLayout">-->
-
-
-    <!--        <com.google.android.material.textview.MaterialTextView-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_gravity="start"-->
-    <!--            android:layout_marginLeft="10dp"-->
-    <!--            android:layout_marginTop="5dp"-->
-    <!--            android:layout_marginBottom="10dp"-->
-    <!--            android:fontFamily="@font/quicksand_medium"-->
-    <!--            android:text="Register"-->
-    <!--            android:textColor="@color/colorPrimaryDark"-->
-    <!--            android:textSize="30sp"-->
-    <!--            android:textStyle="bold" />-->
-
-    <!--        &lt;!&ndash; TextInputLayout for email &ndash;&gt;-->
-    <!--        <com.google.android.material.textfield.TextInputLayout-->
-    <!--            android:id="@+id/emailField"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginLeft="10dp"-->
-    <!--            android:layout_marginTop="15dp"-->
-    <!--            android:layout_marginRight="10dp"-->
-    <!--            android:hint="Email"-->
-    <!--            android:padding="10dp"-->
-    <!--            app:boxCornerRadiusBottomEnd="20dp"-->
-    <!--            app:boxCornerRadiusBottomStart="20dp"-->
-    <!--            app:boxCornerRadiusTopEnd="20dp"-->
-    <!--            app:boxCornerRadiusTopStart="20dp"-->
-    <!--            app:startIconDrawable="@drawable/ic_baseline_people_alt_24"-->
-    <!--            app:startIconTint="@color/colorPrimaryDark">-->
-
-    <!--            <com.google.android.material.textfield.TextInputEditText-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:backgroundTint="#E9F2FF"-->
-    <!--                android:backgroundTintMode="add"-->
-    <!--                android:inputType="textEmailAddress"-->
-    <!--                android:maxLines="1"-->
-    <!--                android:singleLine="true" />-->
-
-    <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-    <!--        <com.google.android.material.textfield.TextInputLayout-->
-    <!--            android:id="@+id/passwordField"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginLeft="10dp"-->
-    <!--            android:layout_marginTop="5dp"-->
-    <!--            android:layout_marginRight="10dp"-->
-    <!--            android:ellipsize="end"-->
-    <!--            android:hint="Password"-->
-    <!--            android:lines="1"-->
-    <!--            android:maxLines="1"-->
-    <!--            android:padding="10dp"-->
-    <!--            android:singleLine="true"-->
-    <!--            app:boxCornerRadiusBottomEnd="20dp"-->
-    <!--            app:boxCornerRadiusBottomStart="20dp"-->
-    <!--            app:boxCornerRadiusTopEnd="20dp"-->
-    <!--            app:boxCornerRadiusTopStart="20dp"-->
-    <!--            app:passwordToggleEnabled="true"-->
-    <!--            app:passwordToggleTint="@color/colorPrimaryDark"-->
-    <!--            app:startIconDrawable="@drawable/ic_baseline_lock_24"-->
-    <!--            app:startIconTint="@color/colorPrimaryDark">-->
-
-    <!--            <com.google.android.material.textfield.TextInputEditText-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:backgroundTint="#E9F2FF"-->
-    <!--                android:backgroundTintMode="add"-->
-    <!--                android:ellipsize="end"-->
-    <!--                android:inputType="textPassword"-->
-    <!--                android:lines="1"-->
-    <!--                android:maxLines="1"-->
-    <!--                android:singleLine="true" />-->
-
-    <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-
-    <!--    </LinearLayout>-->
-
-    <!--    <RelativeLayout-->
-    <!--        android:id="@+id/relativeLayout"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:gravity="center"-->
-    <!--        android:layout_marginBottom="20dp"-->
-    <!--        android:padding="2dp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/singUpLinearLayout">-->
-
-
-    <!--        <com.google.android.material.progressindicator.CircularProgressIndicator-->
-    <!--            android:id="@+id/registerProgressBar"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_gravity="center"-->
-    <!--            android:indeterminate="true"-->
-    <!--            android:padding="6dp"-->
-    <!--            app:indicatorSize="100dp">-->
-
-    <!--        </com.google.android.material.progressindicator.CircularProgressIndicator>-->
-    <!--        &lt;!&ndash; Circular Button with Arrow &ndash;&gt;-->
-    <!--        <Button-->
-    <!--            android:id="@+id/buttonNext"-->
-    <!--            android:layout_width="90dp"-->
-    <!--            android:layout_height="90dp"-->
-    <!--            android:layout_alignStart="@+id/registerProgressBar"-->
-    <!--            android:layout_alignTop="@+id/registerProgressBar"-->
-    <!--            android:layout_alignEnd="@+id/registerProgressBar"-->
-    <!--            android:layout_alignBottom="@+id/registerProgressBar"-->
-    <!--            android:layout_gravity="center"-->
-    <!--            android:layout_marginStart="20dp"-->
-    <!--            android:layout_marginTop="20dp"-->
-    <!--            android:layout_marginEnd="20dp"-->
-    <!--            android:layout_marginBottom="20dp"-->
-    <!--            android:background="@drawable/baseline_arrow_circle_right_24"-->
-    <!--            android:padding="10dp" />-->
-
-    <!--        &lt;!&ndash;        android:layout_marginLeft="13dp"&ndash;&gt;-->
-    <!--        &lt;!&ndash;        android:layout_marginTop="12dp"&ndash;&gt;-->
-
-    <!--    </RelativeLayout>-->
-
-
-    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-</LinearLayout>

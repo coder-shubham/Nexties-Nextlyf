@@ -53,6 +53,13 @@ public class OTPFragment extends Fragment {
 
         otpFragmentLayoutBinding = OtpFragmentLayoutBinding.inflate(inflater);
 
+        otpFragmentLayoutBinding.otpProgressBar.setIndeterminate(false);
+        otpFragmentLayoutBinding.otpProgressBar.setVisibility(View.GONE);
+
+        mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
         sentOtp = "11111";
         if(getArguments() != null) {
             sentOtp = getArguments().getString("otp");

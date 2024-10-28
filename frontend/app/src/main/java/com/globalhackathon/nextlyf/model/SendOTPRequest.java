@@ -2,18 +2,18 @@ package com.globalhackathon.nextlyf.model;
 
 public class SendOTPRequest {
 
-    private String emailId;
+    private String email;
 
     public SendOTPRequest(String emailId) {
-        this.emailId = emailId;
+        this.email = emailId;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 }
