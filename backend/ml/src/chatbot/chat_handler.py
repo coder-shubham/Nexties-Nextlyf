@@ -162,11 +162,13 @@ class ChatHandler:
         self.session_store.add_chat_history(session_id, message={"role": "user", "content": user_message})
         
         # extract entities
-        response = generate_response(self.session_store.get_chat_history(session_id))
-        self.session_store.add_chat_history(session_id, message=response['choices'][0]['message'])
-        entities_obj_str = response['choices'][0]['message']['content']
-        entities_obj = self.extract_json(entities_obj_str.replace(r"\\n", ""))
-        logging.info(f"Extracted entities: {entities_obj}")
+        entities_obj = None
+        while entities_obj is None:
+            response = generate_response(self.session_store.get_chat_history(session_id))
+            self.session_store.add_chat_history(session_id, message=response['choices'][0]['message'])
+            entities_obj_str = response['choices'][0]['message']['content']
+            entities_obj = self.extract_json(entities_obj_str.replace(r"\\n", ""))
+            logging.info(f"Extracted entities: {entities_obj}")
 
         if self.active_entities is None:
             self.active_entities = entities_obj
@@ -215,7 +217,9 @@ class ChatHandler:
 
         return response
 
-    def chat_journey(self, session_id, user_message):
+    def chat_journey(self, session_id, user_message, new_session=False):
+        if new_session:
+            self.active_entities = None
         chat_history = self.session_store.get_chat_history(session_id)
         user_details = self.session_store.get_user_details(session_id)
         response = ""
@@ -236,7 +240,7 @@ class ChatHandler:
             if self.active_intent:
                 response = self.entity_extraction(session_id, self.active_intent, user_message)
             else:
-                retrieved_intents = self.vector_db.get_similar(query=user_message, limit=5)
+                retrieved_intents = self.vector_db.get_similar(query=user_message, limit=5, alpha=0.5)
                 logging.info(f"Retrieved intents: {retrieved_intents}")
                 # validate intent
                 intent_or_faq_object = self.validate_intent(retrieved_intents)

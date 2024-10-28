@@ -1,3 +1,4 @@
+import json
 from flask import Flask, request, jsonify
 
 # from utils import generate_response
@@ -8,6 +9,8 @@ from qa.vector_db import WeaviateDB
 from cfg import Cfg
 from qa.embeddings import get_embeddings
 from chatbot.chat_handler import SessionStore, ChatHandler
+from recommendation import recommendations
+from community import sample_conversation
 
 ###### logger ######
 import logging.handlers
@@ -93,9 +96,24 @@ def converse():
         chat_handler.session_store.clear_chat_history(session_id)
         chat_handler.add_user_details(session_id, user_details)
 
-    user_query = data.get('user_query', "")    
-    response = chat_handler.chat_journey(session_id, user_query)
+    user_query = data.get('user_query', "")
+    response = chat_handler.chat_journey(session_id, user_query, new_session)
     return jsonify({'response': response})
+
+@app.route('/group_conversation', methods=['GET', 'POST'])
+def group_conversation():
+    return jsonify(sample_conversation.example_conversation)
+
+###### recommendation ######
+@app.route('/recommendation', methods=['POST'])
+def recommendation():
+    data: dict = request.get_json()
+    user = data.get('user')
+    recommendation_type = data.get('recommendation_type')
+    logging.info(f"User: {user}, Recommendation type: {recommendation_type}")
+    response = recommendations.recommend(user, recommendation_type)
+    logging.info(f"Recommendations response: {response}")
+    return jsonify({'recommendations': response})
 
 ###### transcription ######
 # @app.route('/transcribe', methods=['POST'])
